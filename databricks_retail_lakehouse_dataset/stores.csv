@@ -1,0 +1,51 @@
+store_id,store_name,city,state,region,store_format,open_date,employee_count
+S001,Bengaluru Store 1,Bengaluru,Karnataka,South,Medium,2023-12-15,58
+S002,Gurugram Store 2,Gurugram,Haryana,North,Medium,2018-07-23,76
+S003,Hyderabad Store 3,Hyderabad,Telangana,South,Medium,2024-03-12,19
+S004,Gurugram Store 4,Gurugram,Haryana,North,Small,2019-11-03,22
+S005,Chennai Store 5,Chennai,Tamil Nadu,South,Large,2022-12-18,36
+S006,Kolkata Store 6,Kolkata,West Bengal,East,Large,2018-08-09,75
+S007,Kolkata Store 7,Kolkata,West Bengal,East,Large,2021-02-23,33
+S008,Jaipur Store 8,Jaipur,Rajasthan,North,Large,2020-03-09,9
+S009,Jaipur Store 9,Jaipur,Rajasthan,North,Large,2018-04-18,14
+S010,Delhi Store 10,Delhi,Delhi,North,Small,2022-05-22,30
+S011,Gurugram Store 11,Gurugram,Haryana,North,Large,2023-05-30,8
+S012,Bengaluru Store 12,Bengaluru,Karnataka,South,Small,2021-03-11,71
+S013,Chennai Store 13,Chennai,Tamil Nadu,South,Small,2021-08-29,65
+S014,Jaipur Store 14,Jaipur,Rajasthan,North,Small,2023-12-29,75
+S015,Jaipur Store 15,Jaipur,Rajasthan,North,Large,2018-09-16,37
+S016,Bengaluru Store 16,Bengaluru,Karnataka,South,Medium,2020-07-24,76
+S017,Pune Store 17,Pune,Maharashtra,West,Medium,2019-12-15,27
+S018,Jaipur Store 18,Jaipur,Rajasthan,North,Large,2019-12-10,25
+S019,Jaipur Store 19,Jaipur,Rajasthan,North,Medium,2019-12-17,49
+S020,Chennai Store 20,Chennai,Tamil Nadu,South,Large,2019-04-05,45
+S021,Jaipur Store 21,Jaipur,Rajasthan,North,Small,2020-10-16,78
+S022,Chennai Store 22,Chennai,Tamil Nadu,South,Medium,2022-02-15,45
+S023,Hyderabad Store 23,Hyderabad,Telangana,South,Small,2018-12-16,72
+S024,Ahmedabad Store 24,Ahmedabad,Gujarat,West,Medium,2021-06-29,54
+S025,Jaipur Store 25,Jaipur,Rajasthan,North,Medium,2023-02-05,77
+S026,Mumbai Store 26,Mumbai,Maharashtra,West,Large,2023-05-02,30
+S027,Chennai Store 27,Chennai,Tamil Nadu,South,Medium,2020-06-06,59
+S028,Gurugram Store 28,Gurugram,Haryana,North,Small,2023-11-14,38
+S029,Kolkata Store 29,Kolkata,West Bengal,East,Medium,2022-01-12,54
+S030,Mumbai Store 30,Mumbai,Maharashtra,West,Medium,2021-10-09,77
+S031,Hyderabad Store 31,Hyderabad,Telangana,South,Small,2023-07-12,54
+S032,Mumbai Store 32,Mumbai,Maharashtra,West,Large,2023-08-10,67
+S033,Mumbai Store 33,Mumbai,Maharashtra,West,Small,2024-07-08,14
+S034,Hyderabad Store 34,Hyderabad,Telangana,South,Large,2022-12-23,26
+S035,Pune Store 35,Pune,Maharashtra,West,Small,2018-11-15,37
+S036,Delhi Store 36,Delhi,Delhi,North,Small,2023-08-12,8
+S037,Chennai Store 37,Chennai,Tamil Nadu,South,Large,2020-05-08,38
+S038,Pune Store 38,Pune,Maharashtra,West,Medium,2022-09-19,61
+S039,Chennai Store 39,Chennai,Tamil Nadu,South,Large,2019-04-19,14
+S040,Pune Store 40,Pune,Maharashtra,West,Medium,2022-07-20,11
+S041,Pune Store 41,Pune,Maharashtra,West,Small,2020-03-29,34
+S042,Delhi Store 42,Delhi,Delhi,North,Large,2018-01-30,63
+S043,Bengaluru Store 43,Bengaluru,Karnataka,South,Large,2022-04-19,14
+S044,Jaipur Store 44,Jaipur,Rajasthan,North,Large,2018-11-13,57
+S045,Chennai Store 45,Chennai,Tamil Nadu,South,Large,2022-05-02,59
+S046,Hyderabad Store 46,Hyderabad,Telangana,South,Large,2019-04-25,56
+S047,Pune Store 47,Pune,Maharashtra,West,Medium,2018-08-03,78
+S048,Bengaluru Store 48,Bengaluru,Karnataka,South,Large,2019-03-08,8
+S049,Pune Store 49,Pune,Maharashtra,West,Medium,2018-12-18,65
+S050,Pune Store 50,Pune,Maharashtra,West,Small,2024-07-12,45

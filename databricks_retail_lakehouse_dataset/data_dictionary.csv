@@ -1,0 +1,10 @@
+file_pattern,column_name,data_type,description
+sales_transactions_batch_*.csv,transaction_id,string,Unique event identifier; duplicate test rows exist
+sales_transactions_batch_*.csv,order_timestamp,timestamp,Contains controlled malformed values
+sales_transactions_batch_*.csv,quantity,integer,Contains controlled negative values
+sales_transactions_batch_*.csv,discount_pct,decimal,0-1 normally; controlled outliers exist
+sales_transactions_batch_*.csv,device_type,string,Appears only in batches 09-10 for schema evolution
+customers.csv,customer_id,string,Customer business key
+products.csv,unit_cost,decimal,Product cost in INR
+products.csv,list_price,decimal,Retail list price in INR
+returns.csv,refund_amount,decimal,Refund amount in INR

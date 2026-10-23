@@ -1,0 +1,21 @@
+campaign_id,campaign_name,start_date,end_date,marketing_channel,budget_inr,objective
+MKT001,Loyalty Booster 1,2025-11-21,2025-12-27,Email,367726.63,Awareness
+MKT002,Festive Sale 2,2026-08-10,2026-09-09,Affiliate,119922.65,Retention
+MKT003,Loyalty Booster 3,2025-01-12,2025-01-19,In-app,782785.56,Awareness
+MKT004,Clearance 4,2026-01-02,2026-01-19,Social,396561.51,Conversion
+MKT005,Clearance 5,2025-03-31,2025-05-07,Social,393435.6,Conversion
+MKT006,Festive Sale 6,2025-04-23,2025-05-15,Social,719300.24,Retention
+MKT007,Festive Sale 7,2026-01-21,2026-02-27,Email,427009.81,Conversion
+MKT008,App Exclusive 8,2026-03-10,2026-03-18,Search,602063.54,Awareness
+MKT009,Clearance 9,2026-01-11,2026-02-15,In-app,323171.1,Retention
+MKT010,Festive Sale 10,2025-11-05,2025-12-19,Search,497277.74,Conversion
+MKT011,App Exclusive 11,2025-12-12,2025-12-31,Social,727686.71,Retention
+MKT012,App Exclusive 12,2026-05-21,2026-06-19,In-app,985777.62,Conversion
+MKT013,New Launch 13,2026-06-24,2026-07-30,Affiliate,717983.64,Retention
+MKT014,New Launch 14,2025-04-29,2025-05-31,Social,143702.06,Awareness
+MKT015,Festive Sale 15,2025-11-21,2025-12-05,Email,295155.35,Retention
+MKT016,App Exclusive 16,2025-09-27,2025-10-11,Search,716632.87,Retention
+MKT017,Loyalty Booster 17,2025-11-16,2025-12-16,In-app,467620.4,Awareness
+MKT018,Festive Sale 18,2025-07-28,2025-09-01,In-app,900916.65,Retention
+MKT019,New Launch 19,2025-09-28,2025-10-10,Email,698273.53,Conversion
+MKT020,Loyalty Booster 20,2025-11-25,2025-12-21,Email,565611.22,Conversion

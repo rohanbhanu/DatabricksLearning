@@ -1,0 +1,601 @@
+product_id,product_name,category,subcategory,brand,unit_cost,list_price,weight_kg,product_status,tax_code
+P00001,Natura Smartphone 1,Electronics,Smartphone,BluePeak,10440.8,14907.05,2.04,Active,GST28
+P00002,Pulse Headphones 2,Electronics,Headphones,Pulse,13020.76,21728.44,2.64,Discontinued,GST18
+P00003,Zenith Smartwatch 3,Electronics,Smartwatch,Pulse,25207.62,35279.73,3.41,Active,GST18
+P00004,Orion Laptop 4,Electronics,Laptop,UrbanLeaf,374.05,632.51,2.07,Active,GST18
+P00005,Orion Headphones 5,Electronics,Headphones,Nova,32435.95,38176.21,1.04,Discontinued,GST12
+P00006,UrbanLeaf Tablet 6,Electronics,Tablet,Pulse,19576.24,29204.74,1.29,Active,GST12
+P00007,Vivid Laptop 7,Electronics,Laptop,Orion,252.75,298.45,2.44,Discontinued,GST12
+P00008,BluePeak Tablet 8,Electronics,Tablet,Vivid,28954.28,42641.76,1.54,Active,GST5
+P00009,Zenith Smartphone 9,Electronics,Smartphone,EverHome,13346.23,19800.05,3.02,Discontinued,GST12
+P00010,Apex Tablet 10,Electronics,Tablet,Zenith,1386.81,1711.6,0.9,Active,GST5
+P00011,BluePeak Tablet 11,Electronics,Tablet,BluePeak,24394.71,54201.38,2.88,Active,GST5
+P00012,Nova Smartphone 12,Electronics,Smartphone,EverHome,28049.92,42408.21,1.27,Active,GST18
+P00013,Zenith Tablet 13,Electronics,Tablet,Orion,17475.49,24263.37,0.58,Discontinued,GST5
+P00014,Natura Headphones 14,Electronics,Headphones,Pulse,2692.7,3378.24,3.28,Active,GST28
+P00015,Pulse Tablet 15,Electronics,Tablet,Natura,7452.34,8781.19,3.08,Active,GST28
+P00016,EverHome Smartphone 16,Electronics,Smartphone,EverHome,23013.04,31145.71,3.2,Discontinued,GST12
+P00017,Natura Laptop 17,Electronics,Laptop,Orion,28291.36,43748.75,2.5,Discontinued,GST18
+P00018,UrbanLeaf Smartphone 18,Electronics,Smartphone,Orion,16282.02,25032.72,3.31,Discontinued,GST5
+P00019,Apex Smartphone 19,Electronics,Smartphone,EverHome,21032.2,37725.11,0.49,Discontinued,GST18
+P00020,Natura Smartwatch 20,Electronics,Smartwatch,BluePeak,14778.01,31313.36,1.41,Active,GST12
+P00021,Apex Smartwatch 21,Electronics,Smartwatch,Pulse,18420.36,25428.85,3.38,Discontinued,GST12
+P00022,Natura Smartwatch 22,Electronics,Smartwatch,Nova,16890.02,29765.34,0.36,Active,GST12
+P00023,Nova Smartwatch 23,Electronics,Smartwatch,Natura,28476.6,45995.92,1.13,Active,GST5
+P00024,UrbanLeaf Laptop 24,Electronics,Laptop,Apex,18937.73,31773.42,3.21,Active,GST18
+P00025,Orion Smartphone 25,Electronics,Smartphone,EverHome,20058.82,33023.09,0.64,Active,GST18
+P00026,Apex Smartwatch 26,Electronics,Smartwatch,EverHome,24126.89,29593.27,1.21,Discontinued,GST12
+P00027,Orion Laptop 27,Electronics,Laptop,Nova,21088.77,46219.61,1.85,Active,GST12
+P00028,Vivid Laptop 28,Electronics,Laptop,Apex,13463.47,18166.97,3.34,Active,GST12
+P00029,Natura Smartphone 29,Electronics,Smartphone,Vivid,22540.72,30254.7,2.94,Active,GST18
+P00030,Vivid Laptop 30,Electronics,Laptop,Zenith,2220.19,4442.0,0.7,Active,GST5
+P00031,Natura Smartwatch 31,Electronics,Smartwatch,BluePeak,9858.29,11282.45,2.59,Active,GST12
+P00032,Natura Tablet 32,Electronics,Tablet,Natura,1969.45,3132.23,2.78,Active,GST12
+P00033,BluePeak Headphones 33,Electronics,Headphones,Apex,9502.46,12669.61,0.13,Active,GST28
+P00034,BluePeak Smartwatch 34,Electronics,Smartwatch,Orion,3439.05,5370.35,2.47,Active,GST12
+P00035,Pulse Smartwatch 35,Electronics,Smartwatch,EverHome,16657.05,27601.65,1.27,Active,GST28
+P00036,Orion Smartwatch 36,Electronics,Smartwatch,Pulse,2345.32,2841.87,3.32,Active,GST18
+P00037,Pulse Headphones 37,Electronics,Headphones,Apex,19544.98,23432.36,0.67,Discontinued,GST28
+P00038,BluePeak Smartwatch 38,Electronics,Smartwatch,Natura,3772.89,7595.39,0.8,Active,GST18
+P00039,UrbanLeaf Laptop 39,Electronics,Laptop,Apex,16236.48,18922.13,1.24,Active,GST12
+P00040,BluePeak Headphones 40,Electronics,Headphones,Natura,29081.29,37079.81,0.22,Active,GST28
+P00041,Natura Tablet 41,Electronics,Tablet,Orion,29925.36,46182.93,1.79,Active,GST28
+P00042,Natura Smartwatch 42,Electronics,Smartwatch,Apex,6677.92,11575.28,2.92,Active,GST12
+P00043,Apex Smartwatch 43,Electronics,Smartwatch,UrbanLeaf,32170.04,55097.2,3.45,Active,GST12
+P00044,Pulse Tablet 44,Electronics,Tablet,Apex,24412.87,33716.25,3.32,Active,GST5
+P00045,UrbanLeaf Smartphone 45,Electronics,Smartphone,Nova,14796.07,25058.4,2.92,Discontinued,GST18
+P00046,Zenith Tablet 46,Electronics,Tablet,Zenith,3182.38,3623.17,0.7,Active,GST12
+P00047,UrbanLeaf Smartwatch 47,Electronics,Smartwatch,Natura,9405.23,12181.7,2.84,Discontinued,GST5
+P00048,Nova Headphones 48,Electronics,Headphones,Nova,5225.61,8958.82,1.65,Active,GST12
+P00049,Orion Smartwatch 49,Electronics,Smartwatch,UrbanLeaf,13977.23,21021.46,1.64,Active,GST28
+P00050,Nova Tablet 50,Electronics,Tablet,Natura,11240.7,16713.15,3.21,Active,GST18
+P00051,Nova Laptop 51,Electronics,Laptop,Nova,1459.07,1694.12,2.35,Active,GST12
+P00052,Pulse Headphones 52,Electronics,Headphones,Pulse,18045.61,35383.6,3.1,Active,GST28
+P00053,UrbanLeaf Headphones 53,Electronics,Headphones,Vivid,19339.39,23352.69,2.32,Discontinued,GST5
+P00054,BluePeak Laptop 54,Electronics,Laptop,BluePeak,10182.18,19048.95,0.68,Active,GST28
+P00055,EverHome Headphones 55,Electronics,Headphones,Vivid,22725.87,49192.27,1.03,Active,GST18
+P00056,Orion Headphones 56,Electronics,Headphones,Apex,26219.87,46487.83,1.66,Discontinued,GST12
+P00057,Vivid Headphones 57,Electronics,Headphones,Orion,34052.53,61378.91,0.42,Discontinued,GST28
+P00058,Natura Tablet 58,Electronics,Tablet,Orion,23637.7,32574.94,3.2,Discontinued,GST18
+P00059,BluePeak Smartwatch 59,Electronics,Smartwatch,BluePeak,520.24,959.54,1.59,Active,GST12
+P00060,Zenith Laptop 60,Electronics,Laptop,Vivid,19962.36,28112.81,0.93,Active,GST5
+P00061,UrbanLeaf Smartphone 61,Electronics,Smartphone,Orion,19773.26,24689.57,0.37,Active,GST18
+P00062,Orion Headphones 62,Electronics,Headphones,BluePeak,16840.1,26849.03,1.61,Active,GST12
+P00063,Apex Smartwatch 63,Electronics,Smartwatch,Zenith,13925.74,16181.09,0.55,Discontinued,GST18
+P00064,Pulse Laptop 64,Electronics,Laptop,Nova,2085.02,3396.33,1.93,Active,GST28
+P00065,Apex Laptop 65,Electronics,Laptop,Nova,6328.51,9897.77,2.19,Active,GST18
+P00066,BluePeak Laptop 66,Electronics,Laptop,Natura,10953.99,23862.01,0.58,Active,GST5
+P00067,Zenith Smartphone 67,Electronics,Smartphone,Natura,25093.17,42508.78,1.41,Active,GST18
+P00068,Natura Smartphone 68,Electronics,Smartphone,Orion,16173.42,23304.06,0.73,Active,GST28
+P00069,Zenith Tablet 69,Electronics,Tablet,Pulse,32689.41,54799.21,1.44,Active,GST5
+P00070,EverHome Smartwatch 70,Electronics,Smartwatch,EverHome,17741.83,23769.95,3.43,Discontinued,GST18
+P00071,Nova Tablet 71,Electronics,Tablet,Natura,7831.58,16301.95,2.24,Active,GST28
+P00072,Orion Tablet 72,Electronics,Tablet,Nova,5624.22,9587.48,1.88,Active,GST12
+P00073,Natura Headphones 73,Electronics,Headphones,Pulse,27566.57,39589.2,2.79,Discontinued,GST28
+P00074,UrbanLeaf Tablet 74,Electronics,Tablet,Orion,26297.28,32184.75,1.6,Active,GST28
+P00075,EverHome Laptop 75,Electronics,Laptop,Vivid,22149.69,29564.19,2.88,Active,GST28
+P00076,UrbanLeaf Smartphone 76,Electronics,Smartphone,BluePeak,25489.73,33376.94,2.74,Active,GST18
+P00077,EverHome Headphones 77,Electronics,Headphones,EverHome,30643.33,66703.03,0.41,Active,GST5
+P00078,Apex Headphones 78,Electronics,Headphones,Vivid,21014.38,37510.13,0.22,Discontinued,GST28
+P00079,Vivid Laptop 79,Electronics,Laptop,Vivid,17615.2,27353.9,3.35,Active,GST18
+P00080,Nova Headphones 80,Electronics,Headphones,BluePeak,21174.16,46387.9,2.4,Active,GST5
+P00081,Orion Tablet 81,Electronics,Tablet,EverHome,33501.11,54676.12,2.81,Active,GST18
+P00082,Vivid Headphones 82,Electronics,Headphones,BluePeak,1722.99,2698.17,2.45,Active,GST5
+P00083,EverHome Tablet 83,Electronics,Tablet,Natura,8725.28,10050.93,2.61,Active,GST28
+P00084,BluePeak Smartwatch 84,Electronics,Smartwatch,Pulse,20529.75,38440.58,3.38,Active,GST5
+P00085,UrbanLeaf Smartphone 85,Electronics,Smartphone,Nova,27174.28,54020.42,0.31,Active,GST5
+P00086,Nova Tablet 86,Electronics,Tablet,UrbanLeaf,26772.23,33363.68,0.88,Active,GST18
+P00087,BluePeak Laptop 87,Electronics,Laptop,EverHome,7631.42,15869.62,2.25,Active,GST5
+P00088,UrbanLeaf Headphones 88,Electronics,Headphones,Apex,26899.37,43057.47,0.63,Active,GST12
+P00089,EverHome Laptop 89,Electronics,Laptop,Pulse,4346.99,6963.72,0.7,Active,GST12
+P00090,BluePeak Tablet 90,Electronics,Tablet,Apex,12221.12,14012.03,2.34,Discontinued,GST28
+P00091,Nova Headphones 91,Electronics,Headphones,Nova,14007.95,22142.65,2.46,Active,GST5
+P00092,BluePeak Smartwatch 92,Electronics,Smartwatch,UrbanLeaf,13217.54,18041.57,3.29,Active,GST12
+P00093,Vivid Headphones 93,Electronics,Headphones,Pulse,34692.28,63912.14,0.44,Active,GST18
+P00094,Natura Headphones 94,Electronics,Headphones,Apex,25179.89,33614.03,0.44,Active,GST28
+P00095,UrbanLeaf Smartphone 95,Electronics,Smartphone,Nova,4737.43,5780.68,2.96,Active,GST5
+P00096,Vivid Tablet 96,Electronics,Tablet,Nova,8370.55,18447.22,3.02,Active,GST18
+P00097,BluePeak Tablet 97,Electronics,Tablet,UrbanLeaf,22481.62,27991.81,0.44,Active,GST5
+P00098,BluePeak Headphones 98,Electronics,Headphones,UrbanLeaf,30150.35,59619.47,0.97,Active,GST12
+P00099,UrbanLeaf Laptop 99,Electronics,Laptop,Pulse,23938.78,43076.76,1.38,Active,GST12
+P00100,Apex Smartphone 100,Electronics,Smartphone,Apex,30951.23,36757.04,1.56,Active,GST18
+P00101,BluePeak Cookware Set 1,Home & Kitchen,Cookware Set,UrbanLeaf,18557.29,37818.25,3.12,Discontinued,GST5
+P00102,Pulse Mixer Grinder 2,Home & Kitchen,Mixer Grinder,Vivid,26245.55,31092.19,0.43,Discontinued,GST28
+P00103,Natura Water Purifier 3,Home & Kitchen,Water Purifier,Nova,14447.29,17583.28,0.67,Active,GST18
+P00104,UrbanLeaf Cookware Set 4,Home & Kitchen,Cookware Set,EverHome,17791.46,35308.18,1.58,Active,GST12
+P00105,Apex Cookware Set 5,Home & Kitchen,Cookware Set,Pulse,1504.59,2375.23,2.42,Active,GST12
+P00106,Orion Mixer Grinder 6,Home & Kitchen,Mixer Grinder,BluePeak,9959.33,16871.5,0.32,Active,GST5
+P00107,Orion Mixer Grinder 7,Home & Kitchen,Mixer Grinder,Orion,23292.84,26829.24,0.06,Active,GST18
+P00108,Pulse Cookware Set 8,Home & Kitchen,Cookware Set,Pulse,19207.38,27342.63,0.26,Discontinued,GST18
+P00109,Nova Bedsheet 9,Home & Kitchen,Bedsheet,Vivid,15866.78,23739.13,2.31,Active,GST5
+P00110,Nova Bedsheet 10,Home & Kitchen,Bedsheet,Orion,13793.2,23133.18,3.27,Active,GST18
+P00111,Pulse Air Fryer 11,Home & Kitchen,Air Fryer,UrbanLeaf,25148.59,28686.98,1.57,Discontinued,GST28
+P00112,UrbanLeaf Cookware Set 12,Home & Kitchen,Cookware Set,Natura,32550.27,39654.08,0.14,Active,GST12
+P00113,UrbanLeaf Mixer Grinder 13,Home & Kitchen,Mixer Grinder,Apex,12686.35,15079.39,2.9,Active,GST5
+P00114,Vivid Bedsheet 14,Home & Kitchen,Bedsheet,Nova,31347.06,60918.67,0.3,Active,GST18
+P00115,Orion Mixer Grinder 15,Home & Kitchen,Mixer Grinder,Apex,6322.65,7333.39,0.28,Discontinued,GST18
+P00116,Pulse Bedsheet 16,Home & Kitchen,Bedsheet,Nova,28084.86,49200.61,2.36,Active,GST18
+P00117,Vivid Bedsheet 17,Home & Kitchen,Bedsheet,EverHome,19870.57,40744.64,3.33,Active,GST12
+P00118,Natura Air Fryer 18,Home & Kitchen,Air Fryer,Nova,29044.7,42250.97,1.11,Active,GST5
+P00119,Apex Cookware Set 19,Home & Kitchen,Cookware Set,Natura,19020.91,31849.46,0.27,Active,GST5
+P00120,EverHome Air Fryer 20,Home & Kitchen,Air Fryer,Pulse,28747.44,39067.8,2.8,Discontinued,GST28
+P00121,Orion Bedsheet 21,Home & Kitchen,Bedsheet,UrbanLeaf,14609.96,17200.89,0.97,Discontinued,GST5
+P00122,Apex Mixer Grinder 22,Home & Kitchen,Mixer Grinder,Pulse,16979.16,26711.28,1.51,Active,GST5
+P00123,Nova Bedsheet 23,Home & Kitchen,Bedsheet,UrbanLeaf,30460.46,44839.73,3.1,Active,GST5
+P00124,BluePeak Air Fryer 24,Home & Kitchen,Air Fryer,Zenith,24662.58,33807.65,1.61,Active,GST28
+P00125,BluePeak Bedsheet 25,Home & Kitchen,Bedsheet,UrbanLeaf,23026.58,31063.1,0.25,Active,GST12
+P00126,Pulse Water Purifier 26,Home & Kitchen,Water Purifier,BluePeak,9430.63,14793.89,1.29,Discontinued,GST12
+P00127,BluePeak Bedsheet 27,Home & Kitchen,Bedsheet,BluePeak,33509.5,54606.12,2.22,Active,GST28
+P00128,Nova Mixer Grinder 28,Home & Kitchen,Mixer Grinder,Natura,5786.24,11748.49,0.89,Discontinued,GST28
+P00129,Zenith Cookware Set 29,Home & Kitchen,Cookware Set,EverHome,25008.25,46653.82,1.04,Active,GST18
+P00130,Vivid Cookware Set 30,Home & Kitchen,Cookware Set,BluePeak,23732.33,30695.18,1.15,Discontinued,GST18
+P00131,Vivid Cookware Set 31,Home & Kitchen,Cookware Set,Vivid,24877.14,40073.26,1.49,Discontinued,GST28
+P00132,BluePeak Cookware Set 32,Home & Kitchen,Cookware Set,Orion,27633.07,33983.75,3.41,Active,GST12
+P00133,UrbanLeaf Air Fryer 33,Home & Kitchen,Air Fryer,Nova,31331.8,65795.87,2.99,Discontinued,GST28
+P00134,Apex Cookware Set 34,Home & Kitchen,Cookware Set,Zenith,8664.85,15904.76,2.43,Active,GST5
+P00135,Orion Air Fryer 35,Home & Kitchen,Air Fryer,UrbanLeaf,13990.65,17584.71,3.4,Discontinued,GST12
+P00136,Vivid Bedsheet 36,Home & Kitchen,Bedsheet,EverHome,6062.75,11971.29,0.68,Active,GST12
+P00137,Zenith Air Fryer 37,Home & Kitchen,Air Fryer,Orion,16121.2,21263.15,1.3,Active,GST18
+P00138,UrbanLeaf Cookware Set 38,Home & Kitchen,Cookware Set,Apex,9539.66,12633.82,0.32,Discontinued,GST18
+P00139,Natura Air Fryer 39,Home & Kitchen,Air Fryer,Orion,31138.15,40647.14,1.7,Active,GST12
+P00140,Zenith Mixer Grinder 40,Home & Kitchen,Mixer Grinder,UrbanLeaf,22141.63,33987.49,3.0,Active,GST28
+P00141,Apex Cookware Set 41,Home & Kitchen,Cookware Set,UrbanLeaf,17737.9,35955.41,2.2,Active,GST28
+P00142,UrbanLeaf Air Fryer 42,Home & Kitchen,Air Fryer,Zenith,26354.89,43628.36,2.33,Active,GST12
+P00143,Pulse Water Purifier 43,Home & Kitchen,Water Purifier,UrbanLeaf,20900.42,31451.74,0.92,Active,GST18
+P00144,Vivid Cookware Set 44,Home & Kitchen,Cookware Set,Pulse,22841.35,37283.57,1.34,Active,GST18
+P00145,Orion Cookware Set 45,Home & Kitchen,Cookware Set,Apex,29904.02,35028.59,0.95,Active,GST12
+P00146,BluePeak Air Fryer 46,Home & Kitchen,Air Fryer,Nova,16845.34,26511.37,1.22,Discontinued,GST12
+P00147,Apex Air Fryer 47,Home & Kitchen,Air Fryer,Nova,11403.92,14335.99,2.55,Active,GST12
+P00148,BluePeak Air Fryer 48,Home & Kitchen,Air Fryer,Pulse,14205.21,18913.54,1.9,Discontinued,GST12
+P00149,Apex Air Fryer 49,Home & Kitchen,Air Fryer,Zenith,7259.14,8444.81,2.23,Active,GST28
+P00150,Apex Bedsheet 50,Home & Kitchen,Bedsheet,Nova,25794.44,41195.0,1.35,Discontinued,GST12
+P00151,UrbanLeaf Bedsheet 51,Home & Kitchen,Bedsheet,Apex,31966.66,51648.13,1.84,Discontinued,GST5
+P00152,Zenith Bedsheet 52,Home & Kitchen,Bedsheet,Pulse,11888.73,17048.16,0.34,Active,GST5
+P00153,UrbanLeaf Mixer Grinder 53,Home & Kitchen,Mixer Grinder,BluePeak,31521.69,42420.38,0.33,Active,GST5
+P00154,Pulse Air Fryer 54,Home & Kitchen,Air Fryer,UrbanLeaf,26672.97,33362.73,1.97,Discontinued,GST12
+P00155,Vivid Cookware Set 55,Home & Kitchen,Cookware Set,EverHome,4019.68,4988.68,3.12,Active,GST18
+P00156,Natura Cookware Set 56,Home & Kitchen,Cookware Set,EverHome,13067.64,25408.63,2.68,Discontinued,GST18
+P00157,Apex Cookware Set 57,Home & Kitchen,Cookware Set,Zenith,1212.12,1420.19,0.34,Active,GST12
+P00158,BluePeak Air Fryer 58,Home & Kitchen,Air Fryer,Pulse,13777.6,22806.99,0.64,Discontinued,GST5
+P00159,Orion Air Fryer 59,Home & Kitchen,Air Fryer,Natura,20292.23,25143.79,2.49,Active,GST28
+P00160,BluePeak Air Fryer 60,Home & Kitchen,Air Fryer,Pulse,23116.66,39852.02,2.47,Active,GST12
+P00161,Natura Mixer Grinder 61,Home & Kitchen,Mixer Grinder,Pulse,11953.3,17962.26,2.33,Active,GST28
+P00162,Apex Bedsheet 62,Home & Kitchen,Bedsheet,Nova,15254.43,22488.88,1.32,Active,GST18
+P00163,Zenith Water Purifier 63,Home & Kitchen,Water Purifier,BluePeak,3689.92,4202.21,2.02,Active,GST18
+P00164,Vivid Bedsheet 64,Home & Kitchen,Bedsheet,Orion,25993.25,51580.69,2.7,Discontinued,GST28
+P00165,EverHome Bedsheet 65,Home & Kitchen,Bedsheet,BluePeak,25106.72,48986.4,1.28,Discontinued,GST28
+P00166,Apex Mixer Grinder 66,Home & Kitchen,Mixer Grinder,UrbanLeaf,31743.86,42923.85,0.35,Active,GST18
+P00167,EverHome Cookware Set 67,Home & Kitchen,Cookware Set,Zenith,13678.54,22997.37,2.94,Active,GST5
+P00168,Zenith Water Purifier 68,Home & Kitchen,Water Purifier,Orion,895.01,1650.01,2.06,Active,GST18
+P00169,Orion Water Purifier 69,Home & Kitchen,Water Purifier,BluePeak,22191.43,29920.07,1.21,Active,GST12
+P00170,Natura Bedsheet 70,Home & Kitchen,Bedsheet,Orion,27069.06,49076.16,0.18,Discontinued,GST28
+P00171,BluePeak Air Fryer 71,Home & Kitchen,Air Fryer,Pulse,27088.56,36545.9,3.07,Active,GST18
+P00172,Orion Cookware Set 72,Home & Kitchen,Cookware Set,Vivid,11612.61,14395.19,2.91,Discontinued,GST28
+P00173,Pulse Water Purifier 73,Home & Kitchen,Water Purifier,Orion,29611.91,34516.45,2.72,Active,GST28
+P00174,Natura Water Purifier 74,Home & Kitchen,Water Purifier,Zenith,26322.86,53757.96,1.99,Discontinued,GST18
+P00175,Pulse Cookware Set 75,Home & Kitchen,Cookware Set,Zenith,7379.17,12065.24,2.39,Active,GST12
+P00176,Orion Mixer Grinder 76,Home & Kitchen,Mixer Grinder,Zenith,28712.05,48324.79,0.18,Active,GST5
+P00177,Natura Water Purifier 77,Home & Kitchen,Water Purifier,Apex,9237.01,10977.63,3.3,Active,GST12
+P00178,Orion Bedsheet 78,Home & Kitchen,Bedsheet,BluePeak,19782.98,26645.46,2.94,Active,GST5
+P00179,Pulse Cookware Set 79,Home & Kitchen,Cookware Set,EverHome,23675.97,38283.18,2.48,Active,GST12
+P00180,UrbanLeaf Water Purifier 80,Home & Kitchen,Water Purifier,EverHome,10008.46,11777.97,2.63,Active,GST18
+P00181,EverHome Mixer Grinder 81,Home & Kitchen,Mixer Grinder,BluePeak,17928.38,21877.67,0.76,Discontinued,GST5
+P00182,Pulse Mixer Grinder 82,Home & Kitchen,Mixer Grinder,BluePeak,18490.18,27772.1,1.6,Active,GST28
+P00183,BluePeak Air Fryer 83,Home & Kitchen,Air Fryer,BluePeak,34881.27,70329.91,2.44,Active,GST18
+P00184,Pulse Mixer Grinder 84,Home & Kitchen,Mixer Grinder,Apex,24939.49,40458.44,2.83,Discontinued,GST5
+P00185,BluePeak Cookware Set 85,Home & Kitchen,Cookware Set,Nova,7145.45,13640.44,1.79,Active,GST18
+P00186,BluePeak Air Fryer 86,Home & Kitchen,Air Fryer,EverHome,3112.36,5183.34,2.3,Discontinued,GST5
+P00187,BluePeak Cookware Set 87,Home & Kitchen,Cookware Set,Apex,23720.27,38955.83,0.82,Active,GST12
+P00188,EverHome Mixer Grinder 88,Home & Kitchen,Mixer Grinder,Pulse,1177.02,1515.46,2.55,Discontinued,GST28
+P00189,EverHome Bedsheet 89,Home & Kitchen,Bedsheet,Orion,27426.64,40074.89,2.69,Discontinued,GST28
+P00190,Natura Air Fryer 90,Home & Kitchen,Air Fryer,Nova,12549.25,16698.53,0.77,Active,GST18
+P00191,Apex Air Fryer 91,Home & Kitchen,Air Fryer,Apex,7135.32,13014.78,3.16,Active,GST28
+P00192,BluePeak Water Purifier 92,Home & Kitchen,Water Purifier,BluePeak,7214.81,9690.91,2.89,Active,GST12
+P00193,Apex Cookware Set 93,Home & Kitchen,Cookware Set,BluePeak,6665.64,14088.23,1.31,Active,GST18
+P00194,Nova Water Purifier 94,Home & Kitchen,Water Purifier,Pulse,11076.34,19817.62,0.13,Discontinued,GST18
+P00195,EverHome Mixer Grinder 95,Home & Kitchen,Mixer Grinder,Nova,15171.19,28310.83,1.38,Active,GST5
+P00196,Zenith Air Fryer 96,Home & Kitchen,Air Fryer,Zenith,22157.89,26793.66,2.86,Discontinued,GST28
+P00197,EverHome Cookware Set 97,Home & Kitchen,Cookware Set,Zenith,3829.1,8020.61,1.99,Active,GST18
+P00198,Natura Cookware Set 98,Home & Kitchen,Cookware Set,Pulse,15904.55,31673.7,0.91,Active,GST18
+P00199,Pulse Mixer Grinder 99,Home & Kitchen,Mixer Grinder,UrbanLeaf,15332.44,20738.92,1.24,Active,GST12
+P00200,Orion Cookware Set 100,Home & Kitchen,Cookware Set,Vivid,25939.2,47441.9,2.19,Discontinued,GST28
+P00201,Vivid Shirt 1,Fashion,Shirt,Zenith,5695.42,8828.26,1.88,Active,GST18
+P00202,Orion Handbag 2,Fashion,Handbag,Natura,12589.62,14907.72,2.06,Active,GST18
+P00203,Zenith Jacket 3,Fashion,Jacket,EverHome,23015.85,30528.18,0.92,Active,GST12
+P00204,Zenith Jeans 4,Fashion,Jeans,Apex,28877.35,32910.13,3.39,Active,GST18
+P00205,Vivid Jeans 5,Fashion,Jeans,EverHome,34242.0,68198.73,1.76,Active,GST18
+P00206,Apex Shoes 6,Fashion,Shoes,Vivid,17320.37,19772.43,2.08,Discontinued,GST18
+P00207,EverHome Shirt 7,Fashion,Shirt,Pulse,4442.73,7587.77,3.29,Active,GST28
+P00208,Orion Jacket 8,Fashion,Jacket,Nova,5082.39,8413.47,2.61,Active,GST5
+P00209,Nova Shoes 9,Fashion,Shoes,Pulse,23337.81,34240.41,0.88,Discontinued,GST5
+P00210,Zenith Jeans 10,Fashion,Jeans,Nova,3776.14,4506.29,2.63,Active,GST5
+P00211,Orion Jacket 11,Fashion,Jacket,UrbanLeaf,30992.67,42486.07,1.73,Active,GST12
+P00212,BluePeak Handbag 12,Fashion,Handbag,UrbanLeaf,24930.14,42016.27,2.67,Discontinued,GST28
+P00213,Orion Handbag 13,Fashion,Handbag,Nova,11898.68,14145.45,1.51,Discontinued,GST5
+P00214,Orion Shoes 14,Fashion,Shoes,Orion,12601.4,18566.45,2.93,Discontinued,GST5
+P00215,Zenith Jacket 15,Fashion,Jacket,Nova,14557.24,31915.26,2.0,Discontinued,GST12
+P00216,Orion Jacket 16,Fashion,Jacket,Natura,8840.88,14609.82,3.09,Active,GST5
+P00217,BluePeak Jacket 17,Fashion,Jacket,BluePeak,4150.52,8467.0,2.08,Discontinued,GST12
+P00218,Apex Jeans 18,Fashion,Jeans,Vivid,4678.92,9543.14,0.56,Discontinued,GST28
+P00219,UrbanLeaf Shirt 19,Fashion,Shirt,EverHome,20803.59,24621.25,3.17,Discontinued,GST18
+P00220,EverHome Handbag 20,Fashion,Handbag,Natura,29395.57,50758.95,1.73,Active,GST28
+P00221,Natura Handbag 21,Fashion,Handbag,EverHome,26397.96,39888.79,2.6,Active,GST28
+P00222,Nova Jeans 22,Fashion,Jeans,Zenith,2121.25,2617.78,2.49,Discontinued,GST12
+P00223,Apex Jeans 23,Fashion,Jeans,EverHome,26686.17,50341.06,0.91,Active,GST5
+P00224,Natura Shirt 24,Fashion,Shirt,Nova,4764.28,6277.66,0.43,Discontinued,GST12
+P00225,Vivid Shirt 25,Fashion,Shirt,EverHome,26379.85,31363.7,0.89,Active,GST18
+P00226,EverHome Shoes 26,Fashion,Shoes,UrbanLeaf,7979.68,11191.25,0.65,Active,GST28
+P00227,Orion Jeans 27,Fashion,Jeans,Pulse,12242.57,18064.71,1.62,Discontinued,GST18
+P00228,Apex Jeans 28,Fashion,Jeans,Nova,26840.98,40913.64,2.81,Active,GST5
+P00229,BluePeak Jeans 29,Fashion,Jeans,Nova,29941.66,36897.56,0.8,Active,GST18
+P00230,EverHome Handbag 30,Fashion,Handbag,BluePeak,6160.09,8942.32,2.63,Active,GST12
+P00231,Apex Jeans 31,Fashion,Jeans,Apex,27563.66,53087.97,1.97,Active,GST5
+P00232,EverHome Jeans 32,Fashion,Jeans,Natura,29231.38,45125.36,1.19,Discontinued,GST12
+P00233,Apex Shirt 33,Fashion,Shirt,Apex,19711.39,24823.69,0.37,Active,GST5
+P00234,BluePeak Jacket 34,Fashion,Jacket,EverHome,16996.18,27379.87,1.51,Discontinued,GST12
+P00235,Zenith Jacket 35,Fashion,Jacket,Pulse,22810.53,47877.06,0.65,Active,GST12
+P00236,Natura Jeans 36,Fashion,Jeans,Vivid,14541.97,28241.85,1.02,Active,GST12
+P00237,Nova Jeans 37,Fashion,Jeans,UrbanLeaf,34203.05,51146.61,2.35,Active,GST5
+P00238,BluePeak Jeans 38,Fashion,Jeans,Apex,17210.63,21897.71,2.33,Active,GST18
+P00239,Orion Shoes 39,Fashion,Shoes,EverHome,4484.96,7684.83,1.61,Active,GST18
+P00240,BluePeak Shirt 40,Fashion,Shirt,Nova,28480.14,54370.43,1.32,Discontinued,GST5
+P00241,EverHome Jacket 41,Fashion,Jacket,Orion,27655.85,33485.5,0.57,Active,GST5
+P00242,Natura Handbag 42,Fashion,Handbag,Vivid,12495.46,23299.76,0.87,Active,GST5
+P00243,Pulse Shirt 43,Fashion,Shirt,Pulse,11533.97,15154.56,1.76,Active,GST5
+P00244,Orion Jeans 44,Fashion,Jeans,Pulse,14046.56,16652.83,1.48,Active,GST12
+P00245,UrbanLeaf Handbag 45,Fashion,Handbag,EverHome,31585.73,39072.15,0.42,Active,GST18
+P00246,UrbanLeaf Handbag 46,Fashion,Handbag,Natura,23351.03,26846.13,1.1,Active,GST18
+P00247,Zenith Jeans 47,Fashion,Jeans,Orion,23507.93,41994.4,1.63,Discontinued,GST28
+P00248,Vivid Shirt 48,Fashion,Shirt,Vivid,25286.3,32510.72,2.96,Active,GST18
+P00249,Nova Shirt 49,Fashion,Shirt,Natura,27210.88,58061.62,2.99,Active,GST18
+P00250,UrbanLeaf Jacket 50,Fashion,Jacket,BluePeak,26088.92,39630.41,2.0,Active,GST12
+P00251,Natura Jacket 51,Fashion,Jacket,Zenith,28262.76,58537.26,0.35,Discontinued,GST5
+P00252,Orion Jacket 52,Fashion,Jacket,BluePeak,13449.53,21068.41,1.46,Discontinued,GST5
+P00253,Nova Jacket 53,Fashion,Jacket,BluePeak,4822.56,8141.33,3.25,Active,GST5
+P00254,Natura Shirt 54,Fashion,Shirt,Natura,5595.38,10101.63,1.52,Discontinued,GST28
+P00255,BluePeak Jeans 55,Fashion,Jeans,Pulse,15545.21,32797.95,0.82,Active,GST12
+P00256,Pulse Jacket 56,Fashion,Jacket,Apex,12706.98,18900.64,2.05,Active,GST18
+P00257,Zenith Jacket 57,Fashion,Jacket,BluePeak,23104.59,31229.59,2.08,Discontinued,GST28
+P00258,Pulse Shirt 58,Fashion,Shirt,BluePeak,11172.22,15695.07,2.12,Active,GST28
+P00259,Orion Shoes 59,Fashion,Shoes,Zenith,25425.05,28971.91,3.46,Discontinued,GST12
+P00260,Vivid Shirt 60,Fashion,Shirt,EverHome,26446.46,40223.87,1.89,Active,GST12
+P00261,Natura Shoes 61,Fashion,Shoes,UrbanLeaf,7495.09,8929.57,1.51,Discontinued,GST12
+P00262,Vivid Shoes 62,Fashion,Shoes,Nova,9582.5,14366.46,2.42,Active,GST5
+P00263,Zenith Shoes 63,Fashion,Shoes,EverHome,573.39,681.77,0.47,Active,GST28
+P00264,Natura Shirt 64,Fashion,Shirt,Nova,1507.71,1774.29,3.38,Active,GST28
+P00265,Zenith Jeans 65,Fashion,Jeans,EverHome,18205.32,38199.87,1.57,Active,GST18
+P00266,Natura Jacket 66,Fashion,Jacket,BluePeak,9964.36,19279.25,2.88,Active,GST18
+P00267,Orion Shirt 67,Fashion,Shirt,Natura,7436.52,11747.73,1.35,Active,GST12
+P00268,Orion Jeans 68,Fashion,Jeans,Zenith,3893.63,8326.74,0.48,Active,GST12
+P00269,Natura Shoes 69,Fashion,Shoes,Nova,22088.63,26438.66,0.73,Active,GST18
+P00270,Natura Shirt 70,Fashion,Shirt,Zenith,20257.6,25052.76,0.27,Active,GST18
+P00271,Natura Handbag 71,Fashion,Handbag,Nova,15740.95,25749.45,2.56,Active,GST12
+P00272,EverHome Jeans 72,Fashion,Jeans,Pulse,19559.15,34026.3,1.39,Discontinued,GST5
+P00273,Vivid Jacket 73,Fashion,Jacket,Natura,29112.17,56186.31,3.29,Active,GST12
+P00274,Natura Shoes 74,Fashion,Shoes,Pulse,662.99,840.67,1.95,Discontinued,GST18
+P00275,Nova Shoes 75,Fashion,Shoes,Vivid,23445.71,39113.01,0.39,Active,GST28
+P00276,BluePeak Jeans 76,Fashion,Jeans,Natura,5704.91,10282.41,3.06,Discontinued,GST5
+P00277,Vivid Jeans 77,Fashion,Jeans,UrbanLeaf,13518.21,18885.67,3.08,Discontinued,GST5
+P00278,Vivid Shoes 78,Fashion,Shoes,Orion,32674.5,51091.7,0.45,Active,GST5
+P00279,Nova Shirt 79,Fashion,Shirt,Orion,28459.76,43057.08,1.56,Discontinued,GST28
+P00280,Vivid Jacket 80,Fashion,Jacket,Vivid,17305.79,27687.21,2.14,Active,GST12
+P00281,Pulse Shirt 81,Fashion,Shirt,Orion,32271.61,49510.49,2.82,Active,GST5
+P00282,UrbanLeaf Shoes 82,Fashion,Shoes,BluePeak,17661.57,31738.74,2.39,Active,GST12
+P00283,Vivid Jacket 83,Fashion,Jacket,Pulse,532.55,769.91,0.43,Active,GST18
+P00284,EverHome Handbag 84,Fashion,Handbag,Orion,16567.44,34471.74,1.23,Discontinued,GST5
+P00285,EverHome Jeans 85,Fashion,Jeans,Pulse,32326.13,42600.28,3.32,Active,GST5
+P00286,UrbanLeaf Shoes 86,Fashion,Shoes,Orion,11127.12,16234.99,1.58,Active,GST18
+P00287,Orion Handbag 87,Fashion,Handbag,UrbanLeaf,18651.98,40790.06,2.54,Active,GST5
+P00288,Apex Handbag 88,Fashion,Handbag,Apex,12836.29,15369.46,1.14,Discontinued,GST28
+P00289,Orion Jeans 89,Fashion,Jeans,Apex,27574.14,42663.41,1.15,Discontinued,GST18
+P00290,Orion Jacket 90,Fashion,Jacket,Nova,17346.03,20075.1,2.33,Active,GST12
+P00291,Natura Handbag 91,Fashion,Handbag,BluePeak,25754.33,56824.03,0.94,Active,GST5
+P00292,EverHome Jeans 92,Fashion,Jeans,Nova,26598.32,35828.27,0.91,Active,GST18
+P00293,BluePeak Jacket 93,Fashion,Jacket,Vivid,7160.05,9222.7,2.04,Active,GST18
+P00294,Zenith Handbag 94,Fashion,Handbag,Orion,34007.18,46881.44,1.61,Active,GST5
+P00295,Pulse Shoes 95,Fashion,Shoes,Vivid,30236.05,59959.99,3.29,Active,GST28
+P00296,BluePeak Jeans 96,Fashion,Jeans,UrbanLeaf,18776.67,21416.2,3.37,Active,GST28
+P00297,EverHome Shirt 97,Fashion,Shirt,UrbanLeaf,13263.56,22328.84,2.52,Discontinued,GST28
+P00298,UrbanLeaf Shoes 98,Fashion,Shoes,BluePeak,16890.54,29686.47,2.23,Active,GST12
+P00299,Pulse Handbag 99,Fashion,Handbag,Vivid,12111.43,26750.1,2.66,Active,GST28
+P00300,BluePeak Handbag 100,Fashion,Handbag,Apex,3431.72,7560.14,2.8,Active,GST12
+P00301,UrbanLeaf Makeup Kit 1,Beauty,Makeup Kit,BluePeak,33303.67,39591.56,0.53,Active,GST28
+P00302,Zenith Shampoo 2,Beauty,Shampoo,Apex,12250.23,20927.59,3.19,Active,GST18
+P00303,Vivid Perfume 3,Beauty,Perfume,Natura,12932.55,15173.75,0.62,Active,GST5
+P00304,BluePeak Perfume 4,Beauty,Perfume,Orion,26822.53,31261.74,1.44,Active,GST12
+P00305,BluePeak Shampoo 5,Beauty,Shampoo,Orion,17717.61,25506.53,2.35,Active,GST18
+P00306,EverHome Sunscreen 6,Beauty,Sunscreen,Orion,20318.65,36587.36,1.58,Discontinued,GST28
+P00307,Orion Shampoo 7,Beauty,Shampoo,Nova,3305.86,4049.0,1.86,Active,GST28
+P00308,BluePeak Makeup Kit 8,Beauty,Makeup Kit,Zenith,11035.41,14628.72,1.56,Active,GST12
+P00309,Orion Shampoo 9,Beauty,Shampoo,Vivid,788.34,977.0,1.57,Active,GST28
+P00310,EverHome Sunscreen 10,Beauty,Sunscreen,BluePeak,32657.17,54949.1,0.32,Active,GST12
+P00311,Nova Face Serum 11,Beauty,Face Serum,Apex,29829.4,39572.6,1.67,Discontinued,GST12
+P00312,BluePeak Makeup Kit 12,Beauty,Makeup Kit,EverHome,26950.51,34610.29,1.13,Active,GST18
+P00313,Apex Sunscreen 13,Beauty,Sunscreen,EverHome,9902.57,11715.09,2.83,Active,GST18
+P00314,BluePeak Shampoo 14,Beauty,Shampoo,Apex,30056.99,51145.1,0.26,Active,GST28
+P00315,UrbanLeaf Sunscreen 15,Beauty,Sunscreen,UrbanLeaf,8281.61,11524.62,1.86,Active,GST18
+P00316,Vivid Perfume 16,Beauty,Perfume,Orion,2607.18,4677.03,1.62,Discontinued,GST12
+P00317,Apex Shampoo 17,Beauty,Shampoo,Nova,31335.65,43005.55,1.81,Discontinued,GST5
+P00318,EverHome Face Serum 18,Beauty,Face Serum,Nova,13442.13,29378.14,2.6,Active,GST12
+P00319,Natura Sunscreen 19,Beauty,Sunscreen,Nova,31194.08,41446.41,2.25,Discontinued,GST18
+P00320,Natura Makeup Kit 20,Beauty,Makeup Kit,Apex,23131.48,29121.04,3.19,Discontinued,GST12
+P00321,EverHome Perfume 21,Beauty,Perfume,EverHome,9768.77,20994.28,2.21,Active,GST18
+P00322,UrbanLeaf Sunscreen 22,Beauty,Sunscreen,Apex,30587.52,38963.26,1.54,Active,GST12
+P00323,Vivid Perfume 23,Beauty,Perfume,Natura,5418.44,6866.85,0.72,Active,GST18
+P00324,Nova Face Serum 24,Beauty,Face Serum,Pulse,16175.15,30183.64,2.66,Active,GST5
+P00325,Orion Shampoo 25,Beauty,Shampoo,Nova,8596.39,14405.96,2.95,Discontinued,GST28
+P00326,BluePeak Face Serum 26,Beauty,Face Serum,BluePeak,8900.15,12127.56,2.73,Discontinued,GST5
+P00327,Orion Perfume 27,Beauty,Perfume,Zenith,15971.45,28879.02,2.59,Active,GST12
+P00328,UrbanLeaf Makeup Kit 28,Beauty,Makeup Kit,Zenith,32175.33,63404.35,2.65,Active,GST12
+P00329,Vivid Face Serum 29,Beauty,Face Serum,Apex,28738.48,35804.86,1.28,Active,GST5
+P00330,Orion Makeup Kit 30,Beauty,Makeup Kit,UrbanLeaf,20560.92,45665.1,0.43,Discontinued,GST28
+P00331,UrbanLeaf Makeup Kit 31,Beauty,Makeup Kit,EverHome,205.2,444.2,2.15,Active,GST18
+P00332,Pulse Face Serum 32,Beauty,Face Serum,BluePeak,29798.23,53833.55,3.45,Active,GST18
+P00333,Zenith Makeup Kit 33,Beauty,Makeup Kit,BluePeak,2292.37,4599.3,0.24,Active,GST18
+P00334,Zenith Face Serum 34,Beauty,Face Serum,Natura,25986.07,32177.15,1.42,Active,GST12
+P00335,Zenith Makeup Kit 35,Beauty,Makeup Kit,Nova,8123.95,17393.12,2.67,Active,GST28
+P00336,Natura Sunscreen 36,Beauty,Sunscreen,Natura,12468.92,15793.62,0.97,Active,GST5
+P00337,EverHome Shampoo 37,Beauty,Shampoo,Zenith,7928.78,9127.28,2.88,Active,GST28
+P00338,Nova Shampoo 38,Beauty,Shampoo,Vivid,29045.73,46401.65,1.15,Active,GST18
+P00339,Vivid Face Serum 39,Beauty,Face Serum,Pulse,26407.89,34616.24,2.33,Active,GST5
+P00340,BluePeak Perfume 40,Beauty,Perfume,Pulse,4197.71,5081.12,1.73,Active,GST5
+P00341,Zenith Makeup Kit 41,Beauty,Makeup Kit,Pulse,1895.34,2457.8,2.02,Active,GST5
+P00342,Zenith Face Serum 42,Beauty,Face Serum,Nova,16550.56,24639.91,0.15,Active,GST18
+P00343,Zenith Sunscreen 43,Beauty,Sunscreen,Vivid,18513.34,37216.91,1.42,Discontinued,GST12
+P00344,EverHome Sunscreen 44,Beauty,Sunscreen,EverHome,10338.5,13596.11,1.35,Active,GST28
+P00345,Nova Shampoo 45,Beauty,Shampoo,Zenith,7731.74,10779.42,2.99,Discontinued,GST18
+P00346,Vivid Face Serum 46,Beauty,Face Serum,Nova,5247.45,8200.18,0.72,Active,GST12
+P00347,Vivid Perfume 47,Beauty,Perfume,Natura,29419.57,35750.49,2.21,Active,GST18
+P00348,Apex Shampoo 48,Beauty,Shampoo,EverHome,20363.77,37207.52,0.11,Discontinued,GST18
+P00349,EverHome Sunscreen 49,Beauty,Sunscreen,EverHome,34101.63,47402.29,1.98,Active,GST12
+P00350,Vivid Face Serum 50,Beauty,Face Serum,Apex,15003.19,21195.87,1.64,Active,GST18
+P00351,Pulse Makeup Kit 51,Beauty,Makeup Kit,EverHome,2421.59,3296.79,3.11,Active,GST12
+P00352,Natura Makeup Kit 52,Beauty,Makeup Kit,Orion,7769.86,9834.68,0.88,Active,GST12
+P00353,Orion Sunscreen 53,Beauty,Sunscreen,BluePeak,1538.49,2568.38,0.67,Discontinued,GST12
+P00354,Apex Perfume 54,Beauty,Perfume,Zenith,24692.18,28479.5,2.19,Discontinued,GST18
+P00355,Pulse Sunscreen 55,Beauty,Sunscreen,BluePeak,34241.34,44883.36,2.37,Discontinued,GST28
+P00356,Natura Face Serum 56,Beauty,Face Serum,Nova,9699.04,15469.93,2.04,Discontinued,GST28
+P00357,EverHome Makeup Kit 57,Beauty,Makeup Kit,Orion,2449.4,3280.36,2.03,Discontinued,GST12
+P00358,Nova Makeup Kit 58,Beauty,Makeup Kit,BluePeak,13522.32,24825.81,2.72,Active,GST5
+P00359,EverHome Perfume 59,Beauty,Perfume,Vivid,16497.36,33713.85,3.17,Active,GST5
+P00360,Apex Makeup Kit 60,Beauty,Makeup Kit,Pulse,30294.1,34767.92,3.38,Active,GST28
+P00361,Nova Makeup Kit 61,Beauty,Makeup Kit,Pulse,22398.32,45055.72,3.0,Active,GST5
+P00362,Pulse Makeup Kit 62,Beauty,Makeup Kit,Apex,23135.44,34931.3,2.39,Discontinued,GST5
+P00363,BluePeak Sunscreen 63,Beauty,Sunscreen,EverHome,11263.99,16538.31,0.9,Active,GST5
+P00364,Pulse Face Serum 64,Beauty,Face Serum,Vivid,9288.07,18189.61,3.21,Discontinued,GST28
+P00365,Pulse Face Serum 65,Beauty,Face Serum,UrbanLeaf,32935.85,46100.56,1.94,Active,GST12
+P00366,Pulse Makeup Kit 66,Beauty,Makeup Kit,Vivid,29415.12,36381.7,2.2,Active,GST12
+P00367,Apex Perfume 67,Beauty,Perfume,Natura,20244.63,34296.73,3.08,Active,GST18
+P00368,Vivid Face Serum 68,Beauty,Face Serum,Orion,25188.97,34481.83,3.07,Active,GST28
+P00369,BluePeak Shampoo 69,Beauty,Shampoo,Pulse,2234.97,4152.4,3.15,Active,GST5
+P00370,Pulse Makeup Kit 70,Beauty,Makeup Kit,Nova,11284.6,17719.64,1.75,Active,GST28
+P00371,Apex Makeup Kit 71,Beauty,Makeup Kit,Zenith,29224.55,37942.41,2.64,Active,GST5
+P00372,Pulse Face Serum 72,Beauty,Face Serum,Orion,26142.41,34255.63,1.47,Active,GST12
+P00373,Nova Face Serum 73,Beauty,Face Serum,Pulse,1857.99,2661.14,2.7,Discontinued,GST12
+P00374,UrbanLeaf Makeup Kit 74,Beauty,Makeup Kit,Vivid,14436.45,25708.28,1.79,Active,GST18
+P00375,Zenith Shampoo 75,Beauty,Shampoo,Zenith,15914.55,20110.3,3.48,Discontinued,GST12
+P00376,Natura Perfume 76,Beauty,Perfume,Pulse,4092.57,7972.43,2.43,Discontinued,GST28
+P00377,Orion Perfume 77,Beauty,Perfume,Vivid,34713.23,50418.84,3.16,Discontinued,GST12
+P00378,Orion Sunscreen 78,Beauty,Sunscreen,BluePeak,31849.73,65187.19,3.41,Active,GST18
+P00379,Pulse Makeup Kit 79,Beauty,Makeup Kit,Pulse,2005.61,2885.65,0.47,Active,GST12
+P00380,Pulse Sunscreen 80,Beauty,Sunscreen,Zenith,150.63,248.21,3.25,Active,GST18
+P00381,EverHome Face Serum 81,Beauty,Face Serum,Nova,33708.41,41505.48,0.21,Active,GST12
+P00382,Pulse Face Serum 82,Beauty,Face Serum,Pulse,14362.59,20247.36,1.26,Discontinued,GST5
+P00383,Pulse Sunscreen 83,Beauty,Sunscreen,Natura,3938.63,4844.4,3.48,Discontinued,GST5
+P00384,Orion Sunscreen 84,Beauty,Sunscreen,Nova,15094.71,26895.02,1.47,Active,GST12
+P00385,Nova Sunscreen 85,Beauty,Sunscreen,Zenith,5572.36,9774.37,0.78,Active,GST28
+P00386,UrbanLeaf Sunscreen 86,Beauty,Sunscreen,Pulse,16207.98,19724.03,0.17,Active,GST18
+P00387,BluePeak Shampoo 87,Beauty,Shampoo,Natura,33280.36,46899.82,0.28,Active,GST28
+P00388,EverHome Perfume 88,Beauty,Perfume,Nova,31011.79,37554.89,2.9,Discontinued,GST28
+P00389,BluePeak Makeup Kit 89,Beauty,Makeup Kit,EverHome,5582.53,9318.97,2.19,Discontinued,GST5
+P00390,Nova Perfume 90,Beauty,Perfume,UrbanLeaf,24874.22,43054.56,1.41,Active,GST12
+P00391,Pulse Perfume 91,Beauty,Perfume,BluePeak,1110.55,1815.36,0.37,Active,GST12
+P00392,EverHome Face Serum 92,Beauty,Face Serum,Pulse,28558.56,49775.41,1.55,Active,GST18
+P00393,UrbanLeaf Face Serum 93,Beauty,Face Serum,Zenith,11405.32,20237.62,0.59,Active,GST28
+P00394,UrbanLeaf Makeup Kit 94,Beauty,Makeup Kit,Vivid,9771.73,13277.24,2.62,Active,GST28
+P00395,Apex Makeup Kit 95,Beauty,Makeup Kit,BluePeak,23320.29,32265.96,3.42,Active,GST18
+P00396,EverHome Sunscreen 96,Beauty,Sunscreen,Pulse,7914.35,9532.72,3.01,Discontinued,GST18
+P00397,EverHome Perfume 97,Beauty,Perfume,Apex,11682.12,16227.07,1.14,Active,GST28
+P00398,Orion Face Serum 98,Beauty,Face Serum,Pulse,34752.18,47576.12,0.08,Active,GST18
+P00399,Zenith Face Serum 99,Beauty,Face Serum,Zenith,19709.55,30256.71,0.37,Active,GST18
+P00400,Vivid Makeup Kit 100,Beauty,Makeup Kit,Natura,20422.26,39722.15,1.55,Active,GST18
+P00401,EverHome Breakfast Cereal 1,Grocery,Breakfast Cereal,BluePeak,13948.34,17108.27,1.13,Active,GST5
+P00402,Orion Dry Fruits 2,Grocery,Dry Fruits,Apex,22713.65,30858.1,1.31,Discontinued,GST28
+P00403,Pulse Coffee 3,Grocery,Coffee,Vivid,2718.42,4325.68,0.91,Active,GST12
+P00404,BluePeak Rice 5kg 4,Grocery,Rice 5kg,Zenith,29242.07,36291.43,2.69,Active,GST18
+P00405,Natura Breakfast Cereal 5,Grocery,Breakfast Cereal,Pulse,22651.09,38241.71,1.51,Active,GST5
+P00406,Apex Cooking Oil 6,Grocery,Cooking Oil,EverHome,32832.08,46853.24,1.01,Discontinued,GST5
+P00407,EverHome Coffee 7,Grocery,Coffee,Orion,5272.5,9105.63,0.91,Active,GST12
+P00408,Nova Coffee 8,Grocery,Coffee,Vivid,31610.93,57760.66,0.38,Active,GST5
+P00409,Natura Coffee 9,Grocery,Coffee,Pulse,18518.65,22217.95,0.3,Active,GST5
+P00410,Zenith Breakfast Cereal 10,Grocery,Breakfast Cereal,BluePeak,21070.09,45409.5,1.59,Active,GST5
+P00411,Pulse Cooking Oil 11,Grocery,Cooking Oil,Natura,31306.92,47549.3,0.91,Active,GST5
+P00412,Natura Coffee 12,Grocery,Coffee,Nova,18063.28,33874.85,1.19,Active,GST5
+P00413,Nova Coffee 13,Grocery,Coffee,Orion,641.48,815.25,3.48,Active,GST5
+P00414,BluePeak Coffee 14,Grocery,Coffee,Orion,13232.79,28036.46,3.35,Discontinued,GST5
+P00415,Apex Cooking Oil 15,Grocery,Cooking Oil,Apex,33653.15,61691.64,1.47,Discontinued,GST18
+P00416,Apex Dry Fruits 16,Grocery,Dry Fruits,UrbanLeaf,849.65,1034.84,3.2,Active,GST28
+P00417,UrbanLeaf Dry Fruits 17,Grocery,Dry Fruits,Vivid,29044.75,53155.14,0.45,Active,GST12
+P00418,Zenith Dry Fruits 18,Grocery,Dry Fruits,Natura,27224.21,31736.4,1.81,Active,GST18
+P00419,Nova Breakfast Cereal 19,Grocery,Breakfast Cereal,Natura,2693.82,3342.33,0.56,Active,GST12
+P00420,EverHome Rice 5kg 20,Grocery,Rice 5kg,Orion,25361.86,33009.42,1.49,Active,GST28
+P00421,Pulse Rice 5kg 21,Grocery,Rice 5kg,Vivid,26584.72,37339.11,2.23,Active,GST5
+P00422,Nova Coffee 22,Grocery,Coffee,Zenith,34300.67,56061.26,0.86,Discontinued,GST18
+P00423,Vivid Rice 5kg 23,Grocery,Rice 5kg,EverHome,13975.91,19177.53,0.55,Active,GST12
+P00424,Nova Cooking Oil 24,Grocery,Cooking Oil,Pulse,26928.71,52209.54,3.49,Active,GST28
+P00425,EverHome Dry Fruits 25,Grocery,Dry Fruits,Apex,8973.19,18472.75,3.13,Active,GST18
+P00426,Apex Dry Fruits 26,Grocery,Dry Fruits,Vivid,8855.24,13706.91,2.62,Active,GST12
+P00427,Nova Breakfast Cereal 27,Grocery,Breakfast Cereal,Vivid,8649.37,17310.52,0.81,Active,GST18
+P00428,Vivid Cooking Oil 28,Grocery,Cooking Oil,Orion,23662.49,34990.5,2.0,Active,GST12
+P00429,EverHome Rice 5kg 29,Grocery,Rice 5kg,Natura,15213.3,21269.06,0.73,Active,GST28
+P00430,UrbanLeaf Cooking Oil 30,Grocery,Cooking Oil,UrbanLeaf,33319.39,48101.04,0.88,Active,GST5
+P00431,Zenith Cooking Oil 31,Grocery,Cooking Oil,Apex,16492.78,21122.91,1.89,Active,GST18
+P00432,Nova Dry Fruits 32,Grocery,Dry Fruits,UrbanLeaf,29239.17,55494.1,3.17,Active,GST5
+P00433,Nova Rice 5kg 33,Grocery,Rice 5kg,EverHome,30142.41,45243.07,0.5,Active,GST18
+P00434,Natura Rice 5kg 34,Grocery,Rice 5kg,Zenith,4742.5,6644.27,0.97,Active,GST18
+P00435,Zenith Cooking Oil 35,Grocery,Cooking Oil,BluePeak,9772.85,21593.25,2.19,Active,GST12
+P00436,Apex Cooking Oil 36,Grocery,Cooking Oil,Vivid,33246.34,58995.64,1.54,Discontinued,GST28
+P00437,EverHome Breakfast Cereal 37,Grocery,Breakfast Cereal,Pulse,22329.23,44840.27,3.36,Active,GST28
+P00438,Nova Dry Fruits 38,Grocery,Dry Fruits,Apex,22634.82,27548.67,0.32,Active,GST18
+P00439,BluePeak Rice 5kg 39,Grocery,Rice 5kg,Pulse,19331.54,29245.8,2.97,Active,GST28
+P00440,Pulse Rice 5kg 40,Grocery,Rice 5kg,Pulse,27749.05,45960.15,2.5,Active,GST12
+P00441,Zenith Cooking Oil 41,Grocery,Cooking Oil,UrbanLeaf,30337.54,54290.44,0.51,Active,GST12
+P00442,Orion Breakfast Cereal 42,Grocery,Breakfast Cereal,Pulse,4608.14,6010.99,1.7,Active,GST28
+P00443,Orion Dry Fruits 43,Grocery,Dry Fruits,Nova,8888.71,12914.71,0.62,Active,GST18
+P00444,Zenith Cooking Oil 44,Grocery,Cooking Oil,Vivid,3335.75,6983.59,1.12,Active,GST12
+P00445,EverHome Dry Fruits 45,Grocery,Dry Fruits,Vivid,6700.99,8580.3,1.74,Active,GST12
+P00446,Zenith Rice 5kg 46,Grocery,Rice 5kg,Pulse,26553.56,49374.72,1.19,Active,GST18
+P00447,Pulse Breakfast Cereal 47,Grocery,Breakfast Cereal,Nova,27722.52,37149.68,3.09,Active,GST12
+P00448,Nova Breakfast Cereal 48,Grocery,Breakfast Cereal,UrbanLeaf,11964.43,14524.26,3.47,Active,GST18
+P00449,Pulse Dry Fruits 49,Grocery,Dry Fruits,Natura,2915.99,4168.47,3.33,Discontinued,GST28
+P00450,Vivid Dry Fruits 50,Grocery,Dry Fruits,Natura,18424.84,34185.64,1.83,Discontinued,GST12
+P00451,BluePeak Dry Fruits 51,Grocery,Dry Fruits,Natura,26140.53,30888.91,1.17,Active,GST18
+P00452,Apex Breakfast Cereal 52,Grocery,Breakfast Cereal,Vivid,4796.57,10384.78,1.21,Discontinued,GST12
+P00453,Nova Cooking Oil 53,Grocery,Cooking Oil,Apex,33353.67,45246.24,2.18,Discontinued,GST12
+P00454,EverHome Dry Fruits 54,Grocery,Dry Fruits,BluePeak,17100.56,24488.27,1.79,Discontinued,GST18
+P00455,Natura Coffee 55,Grocery,Coffee,Pulse,26821.39,42037.93,2.39,Active,GST28
+P00456,UrbanLeaf Breakfast Cereal 56,Grocery,Breakfast Cereal,Nova,21976.38,27001.04,0.2,Active,GST5
+P00457,Vivid Rice 5kg 57,Grocery,Rice 5kg,EverHome,3481.81,4521.1,2.35,Active,GST28
+P00458,Orion Cooking Oil 58,Grocery,Cooking Oil,Natura,11245.21,15163.01,1.22,Active,GST5
+P00459,Nova Breakfast Cereal 59,Grocery,Breakfast Cereal,Vivid,24499.03,35582.22,0.08,Active,GST18
+P00460,Zenith Breakfast Cereal 60,Grocery,Breakfast Cereal,UrbanLeaf,24336.6,49373.38,2.32,Discontinued,GST18
+P00461,UrbanLeaf Breakfast Cereal 61,Grocery,Breakfast Cereal,Natura,33554.47,48080.7,1.08,Active,GST5
+P00462,Pulse Coffee 62,Grocery,Coffee,UrbanLeaf,4094.65,4953.89,2.61,Active,GST12
+P00463,BluePeak Cooking Oil 63,Grocery,Cooking Oil,Orion,30273.41,39320.62,0.85,Discontinued,GST28
+P00464,Pulse Coffee 64,Grocery,Coffee,Pulse,23668.92,40276.11,0.78,Active,GST28
+P00465,Nova Coffee 65,Grocery,Coffee,BluePeak,18658.57,27737.08,2.35,Active,GST18
+P00466,Nova Breakfast Cereal 66,Grocery,Breakfast Cereal,Pulse,15361.11,18278.87,3.2,Active,GST12
+P00467,Apex Breakfast Cereal 67,Grocery,Breakfast Cereal,Natura,1122.23,2074.55,2.11,Discontinued,GST18
+P00468,EverHome Dry Fruits 68,Grocery,Dry Fruits,Natura,13804.84,23984.74,2.68,Active,GST28
+P00469,Apex Cooking Oil 69,Grocery,Cooking Oil,Pulse,27794.42,56276.21,0.46,Active,GST18
+P00470,BluePeak Cooking Oil 70,Grocery,Cooking Oil,Nova,12939.37,18537.09,0.8,Active,GST12
+P00471,Natura Dry Fruits 71,Grocery,Dry Fruits,Orion,32563.81,63163.69,2.52,Active,GST18
+P00472,EverHome Breakfast Cereal 72,Grocery,Breakfast Cereal,Pulse,15636.49,27746.34,0.76,Active,GST28
+P00473,Pulse Breakfast Cereal 73,Grocery,Breakfast Cereal,UrbanLeaf,26593.72,47559.33,1.85,Active,GST18
+P00474,EverHome Dry Fruits 74,Grocery,Dry Fruits,Apex,29452.52,38512.75,0.68,Discontinued,GST5
+P00475,Natura Coffee 75,Grocery,Coffee,BluePeak,21360.01,35292.66,2.31,Active,GST5
+P00476,Pulse Breakfast Cereal 76,Grocery,Breakfast Cereal,Orion,13868.52,27197.03,1.41,Active,GST18
+P00477,Natura Cooking Oil 77,Grocery,Cooking Oil,Orion,20336.89,36821.05,0.27,Active,GST28
+P00478,EverHome Dry Fruits 78,Grocery,Dry Fruits,BluePeak,7682.51,8801.13,1.4,Active,GST5
+P00479,Nova Coffee 79,Grocery,Coffee,Pulse,23784.49,33367.76,1.81,Active,GST18
+P00480,Orion Breakfast Cereal 80,Grocery,Breakfast Cereal,BluePeak,3854.65,4866.53,3.06,Discontinued,GST12
+P00481,Pulse Breakfast Cereal 81,Grocery,Breakfast Cereal,UrbanLeaf,14593.31,30423.91,2.69,Active,GST28
+P00482,Orion Dry Fruits 82,Grocery,Dry Fruits,Orion,16171.52,27867.44,1.08,Active,GST28
+P00483,Natura Rice 5kg 83,Grocery,Rice 5kg,EverHome,34500.34,59295.22,2.15,Active,GST18
+P00484,Pulse Coffee 84,Grocery,Coffee,Nova,24656.81,30771.96,0.22,Active,GST12
+P00485,BluePeak Cooking Oil 85,Grocery,Cooking Oil,UrbanLeaf,27175.49,51754.09,1.4,Active,GST28
+P00486,BluePeak Coffee 86,Grocery,Coffee,EverHome,14770.58,18175.59,2.66,Active,GST5
+P00487,UrbanLeaf Coffee 87,Grocery,Coffee,Natura,17530.3,20769.13,3.47,Active,GST12
+P00488,EverHome Coffee 88,Grocery,Coffee,Apex,2284.3,3648.39,1.68,Active,GST18
+P00489,Orion Breakfast Cereal 89,Grocery,Breakfast Cereal,Orion,21033.2,25861.86,3.1,Active,GST28
+P00490,BluePeak Rice 5kg 90,Grocery,Rice 5kg,Nova,30447.35,61665.17,2.75,Active,GST12
+P00491,Natura Breakfast Cereal 91,Grocery,Breakfast Cereal,BluePeak,27256.54,47551.88,2.8,Active,GST12
+P00492,Pulse Breakfast Cereal 92,Grocery,Breakfast Cereal,Apex,29896.85,45761.19,1.34,Active,GST18
+P00493,UrbanLeaf Breakfast Cereal 93,Grocery,Breakfast Cereal,EverHome,22740.23,30285.5,1.87,Active,GST28
+P00494,Orion Coffee 94,Grocery,Coffee,Nova,14479.62,24568.04,1.62,Active,GST12
+P00495,Apex Rice 5kg 95,Grocery,Rice 5kg,Vivid,26556.03,54983.65,3.32,Active,GST5
+P00496,Zenith Breakfast Cereal 96,Grocery,Breakfast Cereal,Orion,16847.99,23841.79,2.64,Active,GST5
+P00497,Nova Rice 5kg 97,Grocery,Rice 5kg,Vivid,11256.51,12857.69,3.17,Discontinued,GST28
+P00498,Zenith Breakfast Cereal 98,Grocery,Breakfast Cereal,Pulse,17254.44,37143.52,1.55,Active,GST28
+P00499,EverHome Breakfast Cereal 99,Grocery,Breakfast Cereal,EverHome,28411.26,50182.87,0.72,Discontinued,GST18
+P00500,BluePeak Dry Fruits 100,Grocery,Dry Fruits,BluePeak,26716.76,34436.0,1.09,Discontinued,GST28
+P00501,BluePeak Running Shoes 1,Sports,Running Shoes,BluePeak,26051.86,36985.64,3.34,Active,GST12
+P00502,Apex Dumbbells 2,Sports,Dumbbells,Natura,32202.12,39914.15,3.24,Active,GST5
+P00503,Vivid Cricket Bat 3,Sports,Cricket Bat,Pulse,7712.71,10212.44,0.89,Active,GST5
+P00504,Zenith Running Shoes 4,Sports,Running Shoes,Nova,33729.97,40618.0,1.15,Active,GST18
+P00505,Natura Dumbbells 5,Sports,Dumbbells,Pulse,4639.3,6619.86,3.03,Discontinued,GST12
+P00506,Natura Fitness Band 6,Sports,Fitness Band,Pulse,2735.15,3761.33,1.61,Discontinued,GST28
+P00507,Orion Yoga Mat 7,Sports,Yoga Mat,Natura,20059.14,36010.37,0.45,Active,GST28
+P00508,EverHome Running Shoes 8,Sports,Running Shoes,EverHome,17005.35,29828.68,1.31,Discontinued,GST18
+P00509,Natura Fitness Band 9,Sports,Fitness Band,Orion,15807.99,21042.49,3.17,Active,GST28
+P00510,Natura Yoga Mat 10,Sports,Yoga Mat,Vivid,8626.33,16091.18,0.92,Active,GST18
+P00511,EverHome Fitness Band 11,Sports,Fitness Band,BluePeak,32650.09,38310.18,2.96,Active,GST12
+P00512,Pulse Running Shoes 12,Sports,Running Shoes,Zenith,16802.91,24904.74,0.87,Active,GST5
+P00513,Pulse Cricket Bat 13,Sports,Cricket Bat,Pulse,7841.32,10288.97,1.32,Active,GST5
+P00514,Pulse Fitness Band 14,Sports,Fitness Band,Orion,26477.91,50725.98,1.34,Active,GST12
+P00515,Nova Cricket Bat 15,Sports,Cricket Bat,Nova,28504.03,33044.74,1.17,Active,GST18
+P00516,BluePeak Running Shoes 16,Sports,Running Shoes,EverHome,12325.74,14827.48,1.16,Active,GST18
+P00517,Natura Yoga Mat 17,Sports,Yoga Mat,BluePeak,11342.39,17831.94,1.01,Active,GST18
+P00518,Pulse Dumbbells 18,Sports,Dumbbells,Apex,4468.92,7483.3,3.43,Active,GST12
+P00519,EverHome Cricket Bat 19,Sports,Cricket Bat,Orion,32825.76,67185.71,0.87,Active,GST12
+P00520,Natura Running Shoes 20,Sports,Running Shoes,Vivid,21469.62,31717.14,0.12,Discontinued,GST12
+P00521,Natura Fitness Band 21,Sports,Fitness Band,EverHome,6571.78,11383.41,3.21,Discontinued,GST28
+P00522,Vivid Running Shoes 22,Sports,Running Shoes,UrbanLeaf,22180.66,33446.23,2.74,Discontinued,GST12
+P00523,Nova Dumbbells 23,Sports,Dumbbells,Natura,29829.73,42779.95,3.27,Discontinued,GST12
+P00524,BluePeak Fitness Band 24,Sports,Fitness Band,EverHome,22471.62,34133.38,2.97,Discontinued,GST5
+P00525,Pulse Fitness Band 25,Sports,Fitness Band,Vivid,17523.18,27588.37,2.85,Active,GST5
+P00526,Orion Yoga Mat 26,Sports,Yoga Mat,Nova,24039.24,31869.8,1.58,Active,GST28
+P00527,Nova Cricket Bat 27,Sports,Cricket Bat,Apex,33084.8,66801.23,0.11,Discontinued,GST12
+P00528,Orion Cricket Bat 28,Sports,Cricket Bat,UrbanLeaf,24165.58,29594.84,1.6,Active,GST18
+P00529,Natura Running Shoes 29,Sports,Running Shoes,Zenith,13552.52,15519.65,2.36,Active,GST28
+P00530,Orion Dumbbells 30,Sports,Dumbbells,BluePeak,4307.66,6309.64,2.06,Discontinued,GST12
+P00531,Apex Running Shoes 31,Sports,Running Shoes,Natura,28070.01,37716.57,2.76,Discontinued,GST5
+P00532,Pulse Fitness Band 32,Sports,Fitness Band,Orion,23520.27,31393.35,2.51,Active,GST5
+P00533,Natura Running Shoes 33,Sports,Running Shoes,Pulse,6917.22,9722.15,0.54,Active,GST18
+P00534,Nova Yoga Mat 34,Sports,Yoga Mat,Orion,26948.27,47995.65,0.33,Active,GST5
+P00535,Apex Dumbbells 35,Sports,Dumbbells,UrbanLeaf,21241.86,30911.94,1.89,Active,GST28
+P00536,Nova Fitness Band 36,Sports,Fitness Band,UrbanLeaf,8542.23,12442.4,1.72,Active,GST12
+P00537,UrbanLeaf Dumbbells 37,Sports,Dumbbells,Apex,19955.15,37659.43,1.05,Active,GST18
+P00538,BluePeak Yoga Mat 38,Sports,Yoga Mat,Nova,7856.5,9403.04,3.05,Discontinued,GST12
+P00539,Orion Fitness Band 39,Sports,Fitness Band,Vivid,1314.08,2805.94,0.79,Discontinued,GST18
+P00540,Vivid Fitness Band 40,Sports,Fitness Band,Apex,7210.27,14136.45,1.51,Active,GST12
+P00541,EverHome Fitness Band 41,Sports,Fitness Band,Nova,13861.73,18845.86,3.27,Discontinued,GST28
+P00542,Orion Running Shoes 42,Sports,Running Shoes,Pulse,34849.22,47768.45,2.76,Active,GST18
+P00543,Pulse Yoga Mat 43,Sports,Yoga Mat,Pulse,28396.06,38214.73,3.16,Active,GST18
+P00544,Vivid Yoga Mat 44,Sports,Yoga Mat,Natura,10334.75,12868.56,2.59,Active,GST5
+P00545,Vivid Fitness Band 45,Sports,Fitness Band,Pulse,31925.12,59846.22,0.57,Active,GST28
+P00546,Pulse Fitness Band 46,Sports,Fitness Band,UrbanLeaf,10275.28,14167.12,0.21,Active,GST12
+P00547,Zenith Running Shoes 47,Sports,Running Shoes,Apex,32946.69,37742.17,1.33,Discontinued,GST18
+P00548,Nova Fitness Band 48,Sports,Fitness Band,Vivid,8624.76,12226.92,2.37,Discontinued,GST5
+P00549,EverHome Yoga Mat 49,Sports,Yoga Mat,EverHome,12067.21,16706.45,0.36,Active,GST5
+P00550,Nova Running Shoes 50,Sports,Running Shoes,Nova,15460.54,25827.58,0.19,Active,GST18
+P00551,Vivid Fitness Band 51,Sports,Fitness Band,Natura,10586.35,22431.28,0.53,Discontinued,GST5
+P00552,Nova Dumbbells 52,Sports,Dumbbells,EverHome,30604.98,48226.6,1.12,Active,GST12
+P00553,Vivid Running Shoes 53,Sports,Running Shoes,Nova,15343.35,21011.44,3.23,Active,GST28
+P00554,Pulse Cricket Bat 54,Sports,Cricket Bat,UrbanLeaf,19719.8,27911.31,3.05,Active,GST18
+P00555,Apex Running Shoes 55,Sports,Running Shoes,Pulse,27010.84,55579.11,0.18,Active,GST12
+P00556,Zenith Running Shoes 56,Sports,Running Shoes,UrbanLeaf,2336.58,4234.21,0.95,Discontinued,GST28
+P00557,Nova Cricket Bat 57,Sports,Cricket Bat,Nova,23518.08,27193.05,0.95,Active,GST5
+P00558,Vivid Running Shoes 58,Sports,Running Shoes,Vivid,24575.53,48701.34,2.81,Discontinued,GST28
+P00559,Nova Cricket Bat 59,Sports,Cricket Bat,Natura,29488.54,35312.68,1.35,Discontinued,GST5
+P00560,BluePeak Fitness Band 60,Sports,Fitness Band,Apex,20317.87,42904.99,1.77,Active,GST5
+P00561,Vivid Dumbbells 61,Sports,Dumbbells,Apex,33939.59,72594.36,0.82,Active,GST12
+P00562,UrbanLeaf Fitness Band 62,Sports,Fitness Band,Vivid,10348.49,16669.0,0.38,Active,GST5
+P00563,EverHome Dumbbells 63,Sports,Dumbbells,EverHome,8893.19,11583.85,3.48,Active,GST28
+P00564,BluePeak Cricket Bat 64,Sports,Cricket Bat,EverHome,3980.66,7842.35,0.42,Discontinued,GST28
+P00565,UrbanLeaf Fitness Band 65,Sports,Fitness Band,Natura,17560.2,24722.39,1.27,Discontinued,GST18
+P00566,Nova Dumbbells 66,Sports,Dumbbells,Natura,9861.02,11412.74,2.28,Discontinued,GST5
+P00567,Apex Dumbbells 67,Sports,Dumbbells,Orion,31638.71,52763.94,2.72,Active,GST28
+P00568,Apex Yoga Mat 68,Sports,Yoga Mat,Zenith,31291.71,38831.68,2.93,Active,GST28
+P00569,Zenith Yoga Mat 69,Sports,Yoga Mat,Zenith,31391.17,42603.37,2.69,Active,GST12
+P00570,Vivid Dumbbells 70,Sports,Dumbbells,UrbanLeaf,9202.36,19852.98,2.12,Discontinued,GST18
+P00571,Natura Running Shoes 71,Sports,Running Shoes,Apex,9052.74,15182.53,2.93,Discontinued,GST5
+P00572,EverHome Running Shoes 72,Sports,Running Shoes,UrbanLeaf,20855.2,31062.06,0.12,Active,GST12
+P00573,Orion Dumbbells 73,Sports,Dumbbells,UrbanLeaf,8688.85,12214.35,1.13,Active,GST28
+P00574,Zenith Dumbbells 74,Sports,Dumbbells,Apex,164.88,308.02,1.12,Active,GST18
+P00575,Apex Yoga Mat 75,Sports,Yoga Mat,BluePeak,27902.77,40274.9,1.27,Active,GST12
+P00576,Vivid Running Shoes 76,Sports,Running Shoes,BluePeak,12414.5,17380.36,0.54,Discontinued,GST12
+P00577,Apex Yoga Mat 77,Sports,Yoga Mat,Orion,7337.14,9528.84,1.24,Active,GST18
+P00578,Orion Running Shoes 78,Sports,Running Shoes,UrbanLeaf,32546.28,64373.53,3.04,Active,GST5
+P00579,Nova Running Shoes 79,Sports,Running Shoes,Vivid,14116.55,21808.42,3.17,Active,GST5
+P00580,EverHome Dumbbells 80,Sports,Dumbbells,BluePeak,5539.89,6524.3,0.76,Active,GST12
+P00581,Apex Fitness Band 81,Sports,Fitness Band,BluePeak,7479.25,11465.69,0.57,Discontinued,GST12
+P00582,EverHome Dumbbells 82,Sports,Dumbbells,UrbanLeaf,8721.24,10720.64,1.6,Discontinued,GST28
+P00583,Vivid Running Shoes 83,Sports,Running Shoes,Vivid,15249.85,24764.09,3.02,Active,GST28
+P00584,Pulse Fitness Band 84,Sports,Fitness Band,Zenith,33936.04,56117.77,2.06,Active,GST18
+P00585,Apex Running Shoes 85,Sports,Running Shoes,BluePeak,21279.83,26712.3,1.49,Active,GST28
+P00586,EverHome Cricket Bat 86,Sports,Cricket Bat,EverHome,34587.58,66079.84,1.79,Active,GST18
+P00587,Pulse Cricket Bat 87,Sports,Cricket Bat,Vivid,14199.47,20336.02,0.77,Active,GST5
+P00588,BluePeak Cricket Bat 88,Sports,Cricket Bat,Apex,2721.43,3291.04,1.72,Active,GST18
+P00589,Vivid Cricket Bat 89,Sports,Cricket Bat,Vivid,10640.05,21871.05,0.81,Active,GST5
+P00590,Apex Running Shoes 90,Sports,Running Shoes,Vivid,27858.47,46887.24,0.1,Discontinued,GST28
+P00591,BluePeak Running Shoes 91,Sports,Running Shoes,EverHome,18956.04,21660.89,0.52,Active,GST5
+P00592,Natura Fitness Band 92,Sports,Fitness Band,Orion,7835.09,12003.34,3.34,Active,GST5
+P00593,BluePeak Running Shoes 93,Sports,Running Shoes,Natura,9719.02,19464.4,1.72,Active,GST18
+P00594,Orion Dumbbells 94,Sports,Dumbbells,Natura,8672.77,16299.79,2.82,Active,GST28
+P00595,UrbanLeaf Dumbbells 95,Sports,Dumbbells,BluePeak,509.94,729.22,2.52,Active,GST5
+P00596,EverHome Running Shoes 96,Sports,Running Shoes,UrbanLeaf,13949.46,29600.79,2.84,Active,GST28
+P00597,Orion Fitness Band 97,Sports,Fitness Band,Apex,22397.28,27203.81,2.25,Active,GST28
+P00598,Orion Yoga Mat 98,Sports,Yoga Mat,Nova,33001.35,60423.24,3.35,Active,GST5
+P00599,Orion Yoga Mat 99,Sports,Yoga Mat,Pulse,18565.47,21444.66,2.96,Discontinued,GST5
+P00600,Vivid Dumbbells 100,Sports,Dumbbells,Apex,4827.31,7842.98,0.18,Discontinued,GST18
