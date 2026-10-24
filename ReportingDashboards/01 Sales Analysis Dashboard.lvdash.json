@@ -1,0 +1,404 @@
+{
+  "datasets": [
+    {
+      "name": "5fd6e632",
+      "displayName": "Retail Sales Key Performance Indicators Summary",
+      "queryLines": [
+        "SELECT\r\n",
+        "    MAKE_DATE(\r\n",
+        "        order_year,\r\n",
+        "        order_month,\r\n",
+        "        1\r\n",
+        "    ) AS month_date,\r\n",
+        "    order_month_name,\r\n",
+        "    net_sales,\r\n",
+        "    gross_profit,\r\n",
+        "    total_orders,\r\n",
+        "    unique_customers,\r\n",
+        "    avg_order_value,\r\n",
+        "    profit_margin_pct\r\n",
+        "FROM retail_demo.gold.monthly_sales\r\n",
+        "order by order_year,order_month\r\n"
+      ]
+    },
+    {
+      "name": "22cc5e2b",
+      "displayName": "ChannelVsNetSales",
+      "queryLines": [
+        "SELECT\r\n",
+        "    sales_channel,\r\n",
+        "    total_orders,\r\n",
+        "    unique_customers,\r\n",
+        "    units_sold,\r\n",
+        "    net_sales,\r\n",
+        "    gross_profit,\r\n",
+        "    avg_order_value,\r\n",
+        "    avg_delivery_days\r\n",
+        "FROM retail_demo.gold.channel_performance\r\n",
+        "ORDER BY net_sales DESC;"
+      ]
+    },
+    {
+      "name": "f17934e6",
+      "displayName": "SalesByRegion",
+      "queryLines": [
+        "SELECT\r\n",
+        "    region,\r\n",
+        "\r\n",
+        "    ROUND(\r\n",
+        "        SUM(net_sales),\r\n",
+        "        2\r\n",
+        "    ) AS net_sales,\r\n",
+        "\r\n",
+        "    ROUND(\r\n",
+        "        SUM(gross_profit),\r\n",
+        "        2\r\n",
+        "    ) AS gross_profit,\r\n",
+        "\r\n",
+        "    SUM(unique_customers) AS regional_customer_count,\r\n",
+        "\r\n",
+        "    ROUND(\r\n",
+        "        AVG(avg_order_value),\r\n",
+        "        2\r\n",
+        "    ) AS avg_location_order_value,\r\n",
+        "\r\n",
+        "    ROUND(\r\n",
+        "        AVG(avg_delivery_days),\r\n",
+        "        2\r\n",
+        "    ) AS avg_delivery_days\r\n",
+        "\r\n",
+        "FROM retail_demo.gold.regional_performance\r\n",
+        "\r\n",
+        "GROUP BY region\r\n",
+        "\r\n",
+        "ORDER BY net_sales DESC;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "f82f0fb8",
+      "displayName": "Executive Sales Overview",
+      "layout": [
+        {
+          "widget": {
+            "name": "monthly-sales-analysis",
+            "queries": [
+              {
+                "name": "combo_primary_1",
+                "query": {
+                  "datasetName": "5fd6e632",
+                  "fields": [
+                    {
+                      "name": "monthly(month_date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `month_date`)"
+                    },
+                    {
+                      "name": "sum(net_sales)",
+                      "expression": "SUM(`net_sales`)"
+                    },
+                    {
+                      "name": "sum(gross_profit)",
+                      "expression": "SUM(`gross_profit`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "combo_secondary_1",
+                "query": {
+                  "datasetName": "5fd6e632",
+                  "fields": [
+                    {
+                      "name": "monthly(month_date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `month_date`)"
+                    },
+                    {
+                      "name": "sum(unique_customers)",
+                      "expression": "SUM(`unique_customers`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "combo_secondary_2",
+                "query": {
+                  "datasetName": "5fd6e632",
+                  "fields": [
+                    {
+                      "name": "monthly(month_date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `month_date`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "combo_base",
+                "query": {
+                  "datasetName": "5fd6e632",
+                  "fields": [
+                    {
+                      "name": "monthly(month_date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `month_date`)"
+                    },
+                    {
+                      "name": "avg(profit_margin_pct)",
+                      "expression": "AVG(`profit_margin_pct`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "showDescription": true,
+                "headerAlignment": "center",
+                "title": {
+                  "value": "Monthly Sales analysis",
+                  "fields": []
+                },
+                "description": {
+                  "value": "This chart is prepared to compare sales wrt unique customer counts",
+                  "fields": []
+                }
+              },
+              "widgetType": "combo",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(month_date)",
+                  "axis": {
+                    "hideTitle": true,
+                    "hideLabels": false,
+                    "hideGrid": false,
+                    "labelAngle": 90
+                  },
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "primary": {
+                    "scale": {
+                      "type": "quantitative"
+                    },
+                    "layers": [
+                      {
+                        "visual": "bar",
+                        "encodings": {
+                          "value": {
+                            "fields": [
+                              {
+                                "fieldName": "sum(net_sales)"
+                              },
+                              {
+                                "fieldName": "sum(gross_profit)"
+                              }
+                            ]
+                          }
+                        },
+                        "queryName": "combo_primary_1"
+                      }
+                    ]
+                  },
+                  "secondary": {
+                    "scale": {
+                      "type": "quantitative",
+                      "reverse": false
+                    },
+                    "layers": [
+                      {
+                        "visual": "line",
+                        "mark": {
+                          "lineShape": "smooth",
+                          "colors": [
+                            {
+                              "themeColorType": "visualizationColors",
+                              "position": 6
+                            }
+                          ]
+                        },
+                        "encodings": {
+                          "value": {
+                            "fields": [
+                              {
+                                "fieldName": "sum(unique_customers)"
+                              }
+                            ]
+                          },
+                          "label": {
+                            "show": false
+                          }
+                        },
+                        "queryName": "combo_secondary_1"
+                      },
+                      {
+                        "visual": "bar",
+                        "encodings": {},
+                        "queryName": "combo_secondary_2"
+                      }
+                    ],
+                    "format": {
+                      "type": "number-plain",
+                      "abbreviation": "compact",
+                      "decimalPlaces": {
+                        "type": "max",
+                        "places": 0
+                      },
+                      "significantFigures": {
+                        "type": "all"
+                      }
+                    }
+                  }
+                },
+                "extra": [
+                  {
+                    "fieldName": "avg(profit_margin_pct)"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 11,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "55642daa",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "22cc5e2b",
+                  "fields": [
+                    {
+                      "name": "sum(net_sales)",
+                      "expression": "SUM(`net_sales`)"
+                    },
+                    {
+                      "name": "sales_channel",
+                      "expression": "`sales_channel`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "sum(net_sales)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "sales_channel",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 11,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "c99c85c2",
+      "displayName": "Region Sales",
+      "layout": [
+        {
+          "widget": {
+            "name": "sales-by-region",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f17934e6",
+                  "fields": [
+                    {
+                      "name": "region",
+                      "expression": "`region`"
+                    },
+                    {
+                      "name": "sum(gross_profit)",
+                      "expression": "SUM(`gross_profit`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "headerAlignment": "center",
+                "title": {
+                  "value": "<span style=\"font-size: 24px;\">Sales by Region</span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "region",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(gross_profit)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 11,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
