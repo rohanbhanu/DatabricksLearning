@@ -1288,76 +1288,38 @@ with product_tab:
         )
 
 
-        channel_chart_df = channel_df.copy()
+        channel_figure = px.scatter(
+            channel_df,
 
-channel_chart_df["bubble_size"] = (
-    channel_chart_df["net_sales"] /
-    channel_chart_df["net_sales"].max()
-) * 90 + 15
+            x="avg_order_value",
+            y="gross_profit",
 
+            size="net_sales",
 
-channel_figure = px.scatter(
-    channel_chart_df,
+            color="sales_channel",
 
-    x="avg_order_value",
-    y="gross_profit",
+            hover_name="sales_channel",
 
-    size="bubble_size",
+            labels={
+                "avg_order_value":
+                    "Average Order Value (₹)",
+                "gross_profit":
+                    "Gross Profit (₹)",
+                "net_sales":
+                    "Net Sales"
+            },
 
-    color="sales_channel",
+            color_discrete_sequence=CHART_COLORS,
 
-    hover_name="sales_channel",
-
-    hover_data={
-        "net_sales": ":,.0f",
-        "total_orders": ":,.0f",
-        "unique_customers": ":,.0f",
-        "avg_delivery_days": ":.1f",
-        "bubble_size": False
-    },
-
-    labels={
-        "avg_order_value":
-            "Average Order Value (₹)",
-
-        "gross_profit":
-            "Gross Profit (₹)",
-
-        "net_sales":
-            "Net Sales",
-
-        "total_orders":
-            "Total Orders",
-
-        "unique_customers":
-            "Unique Customers",
-
-        "avg_delivery_days":
-            "Avg Delivery Days"
-    },
-
-    color_discrete_sequence=CHART_COLORS,
-
-    size_max=90
-)
-
-
-channel_figure = apply_ivory_theme(
-    channel_figure,
-    height=580,
-    legend_title="Sales Channel"
-    )
-
-channel_figure.update_traces(
-    marker=dict(
-        opacity=0.82,
-
-        line=dict(
-            color=IVORY,
-            width=1.5
+            size_max=65
         )
-    )
-)
+
+
+        channel_figure = apply_ivory_theme(
+            channel_figure,
+            height=580,
+            legend_title="Sales Channel"
+        )
 
 
         st.plotly_chart(
