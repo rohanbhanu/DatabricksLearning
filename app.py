@@ -1288,32 +1288,58 @@ with product_tab:
         )
 
 
-        channel_figure = px.scatter(
-            channel_df,
+channel_chart_df = channel_df.copy()
 
-            x="avg_order_value",
-            y="gross_profit",
+channel_chart_df["bubble_size"] = (
+    channel_chart_df["net_sales"] /
+    channel_chart_df["net_sales"].max()
+) * 90 + 15
 
-            size="net_sales",
 
-            color="sales_channel",
+    channel_figure = px.scatter(
+        channel_chart_df,
 
-            hover_name="sales_channel",
+        x="avg_order_value",
+        y="gross_profit",
 
-            labels={
-                "avg_order_value":
-                    "Average Order Value (₹)",
-                "gross_profit":
-                    "Gross Profit (₹)",
-                "net_sales":
-                    "Net Sales"
-            },
+        size="bubble_size",
 
-            color_discrete_sequence=CHART_COLORS,
+        color="sales_channel",
 
-            size_max=65
-        )
+        hover_name="sales_channel",
 
+        hover_data={
+            "net_sales": ":,.0f",
+            "total_orders": ":,.0f",
+            "unique_customers": ":,.0f",
+            "avg_delivery_days": ":.1f",
+            "bubble_size": False
+        },
+
+        labels={
+            "avg_order_value":
+                "Average Order Value (₹)",
+
+            "gross_profit":
+                "Gross Profit (₹)",
+
+            "net_sales":
+                "Net Sales",
+
+            "total_orders":
+                "Total Orders",
+
+            "unique_customers":
+                "Unique Customers",
+
+            "avg_delivery_days":
+                "Avg Delivery Days"
+        },
+
+        color_discrete_sequence=CHART_COLORS,
+
+        size_max=90
+    )
 
         channel_figure = apply_ivory_theme(
             channel_figure,
