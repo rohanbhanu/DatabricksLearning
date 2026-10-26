@@ -355,14 +355,114 @@ monthly_df["month_date"] = pd.to_datetime(
     monthly_df["month_date"]
 )
 
-monthly_df["month_label"] = (
-    monthly_df["month_date"]
-    .dt.strftime("%b %Y")
+driver_df["month_date"] = pd.to_datetime(
+    driver_df["month_date"]
 )
 
 
-driver_df["month_date"] = pd.to_datetime(
-    driver_df["month_date"]
+# ---------------------------------------------------------
+# Convert Databricks DECIMAL columns to numeric
+# ---------------------------------------------------------
+
+monthly_numeric_columns = [
+    "net_sales",
+    "gross_profit",
+    "total_orders",
+    "unique_customers",
+    "avg_order_value",
+    "profit_margin_pct"
+]
+
+for column in monthly_numeric_columns:
+
+    if column in monthly_df.columns:
+
+        monthly_df[column] = pd.to_numeric(
+            monthly_df[column],
+            errors="coerce"
+        ).fillna(0)
+
+
+driver_numeric_columns = [
+    "net_sales",
+    "gross_profit",
+    "total_orders",
+    "unique_customers"
+]
+
+for column in driver_numeric_columns:
+
+    if column in driver_df.columns:
+
+        driver_df[column] = pd.to_numeric(
+            driver_df[column],
+            errors="coerce"
+        ).fillna(0)
+
+
+product_numeric_columns = [
+    "units_sold",
+    "net_sales",
+    "gross_profit",
+    "profit_margin_pct"
+]
+
+for column in product_numeric_columns:
+
+    if column in product_df.columns:
+
+        product_df[column] = pd.to_numeric(
+            product_df[column],
+            errors="coerce"
+        ).fillna(0)
+
+
+channel_numeric_columns = [
+    "total_orders",
+    "unique_customers",
+    "units_sold",
+    "net_sales",
+    "gross_profit",
+    "avg_order_value",
+    "avg_delivery_days"
+]
+
+for column in channel_numeric_columns:
+
+    if column in channel_df.columns:
+
+        channel_df[column] = pd.to_numeric(
+            channel_df[column],
+            errors="coerce"
+        ).fillna(0)
+
+
+campaign_numeric_columns = [
+    "budget_inr",
+    "total_orders",
+    "unique_customers",
+    "net_sales",
+    "gross_profit",
+    "sales_to_budget_ratio"
+]
+
+for column in campaign_numeric_columns:
+
+    if column in campaign_df.columns:
+
+        campaign_df[column] = pd.to_numeric(
+            campaign_df[column],
+            errors="coerce"
+        ).fillna(0)
+
+
+# ---------------------------------------------------------
+# Create month labels
+# ---------------------------------------------------------
+
+monthly_df["month_label"] = (
+    monthly_df["month_date"]
+    .dt.strftime("%b %Y")
 )
 
 driver_df["month_label"] = (
@@ -373,8 +473,7 @@ driver_df["month_label"] = (
 
 month_order = (
     monthly_df
-    .sort_values("month_date")
-    ["month_label"]
+    .sort_values("month_date")["month_label"]
     .drop_duplicates()
     .tolist()
 )
