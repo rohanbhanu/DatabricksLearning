@@ -1175,21 +1175,44 @@ with momentum_tab:
     )
 
 
-    if race_figure.layout.updatemenus:
+# =========================================================
+# ANIMATION SPEED
+# =========================================================
 
-        race_figure.layout.updatemenus[
-            0
-        ].font = dict(
-            color=IVORY
-        )
+FRAME_DURATION = 2200
+TRANSITION_DURATION = 900
 
-        race_figure.layout.updatemenus[
-            0
-        ].bgcolor = PANEL_NAVY
 
-        race_figure.layout.updatemenus[
-            0
-        ].bordercolor = IVORY
+if race_figure.layout.updatemenus:
+
+    race_figure.layout.updatemenus[
+        0
+    ].font = dict(
+        color=IVORY
+    )
+
+    race_figure.layout.updatemenus[
+        0
+    ].bgcolor = PANEL_NAVY
+
+    race_figure.layout.updatemenus[
+        0
+    ].bordercolor = IVORY
+
+
+    # Play button animation settings
+    race_figure.layout.updatemenus[
+        0
+    ].buttons[0].args[1][
+        "frame"
+    ]["duration"] = FRAME_DURATION
+
+
+    race_figure.layout.updatemenus[
+        0
+    ].buttons[0].args[1][
+        "transition"
+    ]["duration"] = TRANSITION_DURATION
 
 
     if race_figure.layout.sliders:
