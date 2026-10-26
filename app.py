@@ -104,17 +104,33 @@ try:
             "Running SELECT 1..."
         )
 
-        cursor.execute(
-            "SELECT 1 AS connection_test"
-        )
+cursor.execute(
+    """
+    SELECT
+        total_orders,
+        total_customers,
+        net_sales,
+        gross_profit,
+        avg_order_value,
+        profit_margin_pct
+    FROM retail_demo.gold.sales_kpi
+    """
+)
 
-        result = cursor.fetchall()
+result = (
+    cursor
+    .fetchall_arrow()
+    .to_pandas()
+)
 
         st.success(
             "SQL query completed successfully."
         )
 
-        st.write(result)
+        st.dataframe(
+    result,
+    use_container_width=True
+)
 
 
     connection.close()
