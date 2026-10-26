@@ -6,7 +6,3 @@ env:
 
   - name: STREAMLIT_GATHER_USAGE_STATS
     value: "false"
-
-env:
-  - name: DATABRICKS_WAREHOUSE_ID
-    valueFrom: retail-warehouse
