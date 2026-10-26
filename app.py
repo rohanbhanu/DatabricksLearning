@@ -5,12 +5,15 @@ from databricks import sql
 from databricks.sdk.core import Config
 
 
+# =========================================================
+# PAGE CONFIGURATION
+# =========================================================
+
 st.set_page_config(
     page_title="Retail Sales Intelligence",
     page_icon="📊",
     layout="wide"
 )
-
 
 st.title("Retail Sales Intelligence")
 
@@ -19,30 +22,22 @@ st.caption(
 )
 
 
-cfg = Config()
+# =========================================================
+# DATABRICKS CONFIGURATION
+# =========================================================
 
+cfg = Config()
 
 warehouse_id = os.getenv(
     "DATABRICKS_WAREHOUSE_ID"
 )
 
 
-# ---------------------------------------------------------
-# Diagnostic information
-# ---------------------------------------------------------
+# =========================================================
+# VALIDATE SQL WAREHOUSE RESOURCE
+# =========================================================
 
-if warehouse_id:
-
-    st.success(
-        "SQL Warehouse resource detected."
-    )
-
-    st.write(
-        "Warehouse ID:",
-        warehouse_id
-    )
-
-else:
+if not warehouse_id:
 
     st.error(
         "DATABRICKS_WAREHOUSE_ID was not found."
@@ -51,22 +46,16 @@ else:
     st.stop()
 
 
-# ---------------------------------------------------------
-# Create connection
-# ---------------------------------------------------------
+# =========================================================
+# SQL CONNECTION
+# =========================================================
 
 def get_connection():
 
     server_hostname = (
         cfg.host
-        .replace(
-            "https://",
-            ""
-        )
-        .replace(
-            "http://",
-            ""
-        )
+        .replace("https://", "")
+        .replace("http://", "")
     )
 
     http_path = (
@@ -81,67 +70,131 @@ def get_connection():
     )
 
 
-# ---------------------------------------------------------
-# Test simple SQL query first
-# ---------------------------------------------------------
+# =========================================================
+# GENERIC QUERY FUNCTION
+# =========================================================
+
+def run_query(query):
+
+    connection = None
+
+    try:
+
+        connection = get_connection()
+
+        with connection.cursor() as cursor:
+
+            cursor.execute(query)
+
+            result = (
+                cursor
+                .fetchall_arrow()
+                .to_pandas()
+            )
+
+        return result
+
+    finally:
+
+        if connection is not None:
+
+            connection.close()
+
+
+# =========================================================
+# LOAD GOLD KPI DATA
+# =========================================================
 
 try:
 
-    st.info(
-        "Connecting to SQL Warehouse..."
+    kpi_df = run_query(
+        """
+        SELECT
+            total_orders,
+            total_customers,
+            net_sales,
+            gross_profit,
+            avg_order_value,
+            profit_margin_pct
+        FROM retail_demo.gold.sales_kpi
+        """
     )
 
-    connection = get_connection()
 
-    st.success(
-        "SQL Warehouse connection created."
-    )
+    # =====================================================
+    # DISPLAY KPI CARDS
+    # =====================================================
+
+    if not kpi_df.empty:
+
+        row = kpi_df.iloc[0]
 
 
-    with connection.cursor() as cursor:
+        col1, col2, col3 = st.columns(3)
 
-        st.info(
-            "Running SELECT 1..."
+
+        with col1:
+
+            st.metric(
+                label="Net Sales",
+                value=f"₹{row['net_sales']:,.0f}"
+            )
+
+
+        with col2:
+
+            st.metric(
+                label="Gross Profit",
+                value=f"₹{row['gross_profit']:,.0f}"
+            )
+
+
+        with col3:
+
+            st.metric(
+                label="Total Orders",
+                value=f"{row['total_orders']:,.0f}"
+            )
+
+
+        col4, col5, col6 = st.columns(3)
+
+
+        with col4:
+
+            st.metric(
+                label="Total Customers",
+                value=f"{row['total_customers']:,.0f}"
+            )
+
+
+        with col5:
+
+            st.metric(
+                label="Average Order Value",
+                value=f"₹{row['avg_order_value']:,.0f}"
+            )
+
+
+        with col6:
+
+            st.metric(
+                label="Profit Margin",
+                value=f"{row['profit_margin_pct']:.2f}%"
+            )
+
+
+    else:
+
+        st.warning(
+            "Gold sales KPI table returned no records."
         )
-
-cursor.execute(
-    """
-    SELECT
-        total_orders,
-        total_customers,
-        net_sales,
-        gross_profit,
-        avg_order_value,
-        profit_margin_pct
-    FROM retail_demo.gold.sales_kpi
-    """
-)
-
-result = (
-    cursor
-    .fetchall_arrow()
-    .to_pandas()
-)
-
-        st.success(
-            "SQL query completed successfully."
-        )
-
-        st.dataframe(
-    result,
-    use_container_width=True
-)
-
-
-    connection.close()
 
 
 except Exception as error:
 
     st.error(
-        "SQL Warehouse connection failed."
+        "Unable to query retail_demo.gold.sales_kpi."
     )
 
     st.exception(error)
-
-    st.stop()
