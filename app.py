@@ -10,6 +10,35 @@ from databricks.sdk.core import Config
 
 
 # =========================================================
+# CONSTANTS
+# =========================================================
+
+IVORY = "#FFFFF0"
+MUTED_IVORY = "#DEDCCB"
+NAVY = "#071426"
+SECONDARY_NAVY = "#0B2442"
+PANEL_NAVY = "#102F52"
+
+SKY_BLUE = "#38BDF8"
+MINT_GREEN = "#59E3AE"
+LAVENDER = "#C084FC"
+INDIGO = "#818CF8"
+CORAL = "#FB7185"
+AMBER = "#FBBF24"
+
+CHART_COLORS = [
+    SKY_BLUE,
+    MINT_GREEN,
+    LAVENDER,
+    INDIGO,
+    CORAL,
+    AMBER,
+    "#22D3EE",
+    "#A3E635"
+]
+
+
+# =========================================================
 # PAGE CONFIGURATION
 # =========================================================
 
@@ -22,53 +51,144 @@ st.set_page_config(
 
 
 # =========================================================
-# CUSTOM STYLING
+# CUSTOM STREAMLIT STYLING
 # =========================================================
 
 st.markdown(
-    """
+    f"""
     <style>
 
-    .stApp {
+    .stApp {{
         background:
             linear-gradient(
                 145deg,
-                #071426 0%,
-                #0b2442 55%,
-                #102f52 100%
+                {NAVY} 0%,
+                {SECONDARY_NAVY} 55%,
+                {PANEL_NAVY} 100%
             );
-    }
+        color: {IVORY};
+    }}
 
-    [data-testid="stHeader"] {
+    [data-testid="stHeader"] {{
         background: rgba(0, 0, 0, 0);
-    }
+    }}
 
-    [data-testid="stMetric"] {
-        background: rgba(255, 255, 255, 0.07);
-        border: 1px solid rgba(255, 255, 255, 0.12);
+    [data-testid="stToolbar"] {{
+        color: {IVORY};
+    }}
+
+    [data-testid="stAppViewContainer"] {{
+        color: {IVORY};
+    }}
+
+    [data-testid="stMainBlockContainer"] {{
+        padding-top: 2rem;
+    }}
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {{
+        color: {IVORY} !important;
+    }}
+
+    p,
+    label,
+    span {{
+        color: {IVORY};
+    }}
+
+    [data-testid="stMarkdownContainer"] {{
+        color: {IVORY};
+    }}
+
+    [data-testid="stMarkdownContainer"] p {{
+        color: {MUTED_IVORY};
+    }}
+
+    [data-testid="stCaptionContainer"] {{
+        color: {MUTED_IVORY} !important;
+    }}
+
+    [data-testid="stMetric"] {{
+        background: rgba(255, 255, 255, 0.075);
+        border: 1px solid rgba(255, 255, 240, 0.16);
         border-radius: 14px;
-        padding: 16px;
-    }
+        padding: 17px;
+        min-height: 130px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    }}
 
-    [data-testid="stMetricLabel"] {
-        color: #a9bdd5;
-    }
+    [data-testid="stMetricLabel"] {{
+        color: {IVORY} !important;
+        font-size: 15px;
+        font-weight: 600;
+    }}
 
-    [data-testid="stMetricValue"] {
-        color: #ffffff;
-    }
+    [data-testid="stMetricLabel"] p {{
+        color: {IVORY} !important;
+    }}
 
-    h1, h2, h3 {
-        color: #ffffff;
-    }
+    [data-testid="stMetricValue"] {{
+        color: {IVORY} !important;
+        font-weight: 700;
+    }}
 
-    p {
-        color: #c8d8ea;
-    }
+    [data-testid="stMetricDelta"] {{
+        color: {MINT_GREEN} !important;
+    }}
 
-    div[data-testid="stTabs"] button {
-        color: #dbeafe;
-    }
+    [data-testid="stRadio"] label {{
+        color: {IVORY} !important;
+    }}
+
+    [data-testid="stRadio"] p {{
+        color: {IVORY} !important;
+        font-size: 15px;
+    }}
+
+    div[role="radiogroup"] label {{
+        color: {IVORY} !important;
+    }}
+
+    div[role="radiogroup"] span {{
+        color: {IVORY} !important;
+    }}
+
+    button[data-baseweb="tab"] {{
+        color: {MUTED_IVORY} !important;
+        font-weight: 600;
+        font-size: 14px;
+    }}
+
+    button[data-baseweb="tab"][aria-selected="true"] {{
+        color: {IVORY} !important;
+    }}
+
+    [data-testid="stTabs"] [data-baseweb="tab-highlight"] {{
+        background-color: {SKY_BLUE};
+    }}
+
+    [data-testid="stDataFrame"] {{
+        border: 1px solid rgba(255, 255, 240, 0.16);
+        border-radius: 10px;
+        overflow: hidden;
+    }}
+
+    [data-testid="stAlert"] {{
+        color: {IVORY};
+        border-radius: 10px;
+    }}
+
+    [data-testid="stAlert"] p {{
+        color: {IVORY} !important;
+    }}
+
+    hr {{
+        border-color: rgba(255, 255, 240, 0.15);
+    }}
 
     </style>
     """,
@@ -155,8 +275,25 @@ def run_query(query):
 
 
 # =========================================================
-# FORMAT HELPERS
+# DATA CONVERSION HELPERS
 # =========================================================
+
+def convert_numeric_columns(
+    dataframe,
+    columns
+):
+
+    for column in columns:
+
+        if column in dataframe.columns:
+
+            dataframe[column] = pd.to_numeric(
+                dataframe[column],
+                errors="coerce"
+            ).fillna(0)
+
+    return dataframe
+
 
 def numeric_value(value):
 
@@ -168,23 +305,121 @@ def numeric_value(value):
 
 def format_currency(value):
 
-    return (
-        f"₹{numeric_value(value):,.0f}"
-    )
+    return f"₹{numeric_value(value):,.0f}"
 
 
 def format_number(value):
 
-    return (
-        f"{numeric_value(value):,.0f}"
-    )
+    return f"{numeric_value(value):,.0f}"
 
 
 def format_percentage(value):
 
-    return (
-        f"{numeric_value(value):,.2f}%"
+    return f"{numeric_value(value):,.2f}%"
+
+
+# =========================================================
+# PLOTLY THEME HELPER
+# =========================================================
+
+def apply_ivory_theme(
+    figure,
+    height=520,
+    legend_title=""
+):
+
+    figure.update_layout(
+        height=height,
+        template="plotly_dark",
+
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+
+        font=dict(
+            color=IVORY,
+            family="Arial",
+            size=13
+        ),
+
+        title=dict(
+            font=dict(
+                color=IVORY,
+                size=21,
+                family="Arial"
+            ),
+            x=0.01,
+            xanchor="left"
+        ),
+
+        legend=dict(
+            font=dict(
+                color=IVORY,
+                size=12
+            ),
+
+            title=dict(
+                text=legend_title,
+                font=dict(
+                    color=IVORY,
+                    size=13
+                )
+            ),
+
+            bgcolor="rgba(7,20,38,0.40)",
+            bordercolor="rgba(255,255,240,0.15)",
+            borderwidth=1
+        ),
+
+        xaxis=dict(
+            title_font=dict(
+                color=IVORY,
+                size=14
+            ),
+
+            tickfont=dict(
+                color=IVORY,
+                size=12
+            ),
+
+            gridcolor="rgba(255,255,240,0.10)",
+            zerolinecolor="rgba(255,255,240,0.18)",
+            linecolor="rgba(255,255,240,0.20)"
+        ),
+
+        yaxis=dict(
+            title_font=dict(
+                color=IVORY,
+                size=14
+            ),
+
+            tickfont=dict(
+                color=IVORY,
+                size=12
+            ),
+
+            gridcolor="rgba(255,255,240,0.10)",
+            zerolinecolor="rgba(255,255,240,0.18)",
+            linecolor="rgba(255,255,240,0.20)"
+        ),
+
+        hoverlabel=dict(
+            bgcolor=SECONDARY_NAVY,
+            bordercolor=IVORY,
+            font=dict(
+                color=IVORY,
+                size=13
+            )
+        ),
+
+        margin=dict(
+            l=30,
+            r=30,
+            t=70,
+            b=40
+        )
     )
+
+    return figure
 
 
 # =========================================================
@@ -201,7 +436,7 @@ st.caption(
 
 
 # =========================================================
-# LOAD DATA
+# LOAD GOLD DATA
 # =========================================================
 
 try:
@@ -339,7 +574,7 @@ try:
 except Exception as error:
 
     st.error(
-        "Unable to load the Gold-layer analytics."
+        "Unable to load Gold-layer analytics."
     )
 
     st.exception(error)
@@ -360,110 +595,73 @@ driver_df["month_date"] = pd.to_datetime(
 )
 
 
-# ---------------------------------------------------------
-# Convert Databricks DECIMAL columns to numeric
-# ---------------------------------------------------------
-
-monthly_numeric_columns = [
-    "net_sales",
-    "gross_profit",
-    "total_orders",
-    "unique_customers",
-    "avg_order_value",
-    "profit_margin_pct"
-]
-
-for column in monthly_numeric_columns:
-
-    if column in monthly_df.columns:
-
-        monthly_df[column] = pd.to_numeric(
-            monthly_df[column],
-            errors="coerce"
-        ).fillna(0)
+monthly_df = convert_numeric_columns(
+    monthly_df,
+    [
+        "net_sales",
+        "gross_profit",
+        "total_orders",
+        "unique_customers",
+        "avg_order_value",
+        "profit_margin_pct"
+    ]
+)
 
 
-driver_numeric_columns = [
-    "net_sales",
-    "gross_profit",
-    "total_orders",
-    "unique_customers"
-]
-
-for column in driver_numeric_columns:
-
-    if column in driver_df.columns:
-
-        driver_df[column] = pd.to_numeric(
-            driver_df[column],
-            errors="coerce"
-        ).fillna(0)
+driver_df = convert_numeric_columns(
+    driver_df,
+    [
+        "net_sales",
+        "gross_profit",
+        "total_orders",
+        "unique_customers"
+    ]
+)
 
 
-product_numeric_columns = [
-    "units_sold",
-    "net_sales",
-    "gross_profit",
-    "profit_margin_pct"
-]
-
-for column in product_numeric_columns:
-
-    if column in product_df.columns:
-
-        product_df[column] = pd.to_numeric(
-            product_df[column],
-            errors="coerce"
-        ).fillna(0)
+product_df = convert_numeric_columns(
+    product_df,
+    [
+        "units_sold",
+        "net_sales",
+        "gross_profit",
+        "profit_margin_pct"
+    ]
+)
 
 
-channel_numeric_columns = [
-    "total_orders",
-    "unique_customers",
-    "units_sold",
-    "net_sales",
-    "gross_profit",
-    "avg_order_value",
-    "avg_delivery_days"
-]
-
-for column in channel_numeric_columns:
-
-    if column in channel_df.columns:
-
-        channel_df[column] = pd.to_numeric(
-            channel_df[column],
-            errors="coerce"
-        ).fillna(0)
+channel_df = convert_numeric_columns(
+    channel_df,
+    [
+        "total_orders",
+        "unique_customers",
+        "units_sold",
+        "net_sales",
+        "gross_profit",
+        "avg_order_value",
+        "avg_delivery_days"
+    ]
+)
 
 
-campaign_numeric_columns = [
-    "budget_inr",
-    "total_orders",
-    "unique_customers",
-    "net_sales",
-    "gross_profit",
-    "sales_to_budget_ratio"
-]
+campaign_df = convert_numeric_columns(
+    campaign_df,
+    [
+        "budget_inr",
+        "total_orders",
+        "unique_customers",
+        "net_sales",
+        "gross_profit",
+        "sales_to_budget_ratio"
+    ]
+)
 
-for column in campaign_numeric_columns:
-
-    if column in campaign_df.columns:
-
-        campaign_df[column] = pd.to_numeric(
-            campaign_df[column],
-            errors="coerce"
-        ).fillna(0)
-
-
-# ---------------------------------------------------------
-# Create month labels
-# ---------------------------------------------------------
 
 monthly_df["month_label"] = (
     monthly_df["month_date"]
     .dt.strftime("%b %Y")
 )
+
 
 driver_df["month_label"] = (
     driver_df["month_date"]
@@ -480,12 +678,13 @@ month_order = (
 
 
 # =========================================================
-# EXECUTIVE KPIs
+# EXECUTIVE KPI CARDS
 # =========================================================
 
 if not kpi_df.empty:
 
     kpi = kpi_df.iloc[0]
+
 
     row1_col1, row1_col2, row1_col3 = (
         st.columns(3)
@@ -596,13 +795,17 @@ with overview_tab:
             y=monthly_df["net_sales"],
             mode="lines+markers",
             name="Net Sales",
-            line={
-                "color": "#38bdf8",
-                "width": 3
-            },
-            marker={
-                "size": 8
-            },
+
+            line=dict(
+                color=SKY_BLUE,
+                width=3
+            ),
+
+            marker=dict(
+                size=8,
+                color=SKY_BLUE
+            ),
+
             hovertemplate=(
                 "%{x|%b %Y}"
                 "<br>Net Sales: ₹%{y:,.0f}"
@@ -618,13 +821,17 @@ with overview_tab:
             y=monthly_df["gross_profit"],
             mode="lines+markers",
             name="Gross Profit",
-            line={
-                "color": "#59e3ae",
-                "width": 3
-            },
-            marker={
-                "size": 8
-            },
+
+            line=dict(
+                color=MINT_GREEN,
+                width=3
+            ),
+
+            marker=dict(
+                size=8,
+                color=MINT_GREEN
+            ),
+
             hovertemplate=(
                 "%{x|%b %Y}"
                 "<br>Gross Profit: ₹%{y:,.0f}"
@@ -634,21 +841,17 @@ with overview_tab:
     )
 
 
+    trend_figure = apply_ivory_theme(
+        trend_figure,
+        height=500
+    )
+
+
     trend_figure.update_layout(
-        height=500,
-        template="plotly_dark",
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
         xaxis_title="Month",
         yaxis_title="Amount (₹)",
         legend_title="",
-        hovermode="x unified",
-        margin={
-            "l": 20,
-            "r": 20,
-            "t": 20,
-            "b": 20
-        }
+        hovermode="x unified"
     )
 
 
@@ -671,18 +874,32 @@ with overview_tab:
             y="total_orders",
             title="Monthly Orders",
             color_discrete_sequence=[
-                "#818cf8"
+                INDIGO
             ]
         )
 
+
+        monthly_orders_figure = apply_ivory_theme(
+            monthly_orders_figure,
+            height=470
+        )
+
+
         monthly_orders_figure.update_layout(
-            template="plotly_dark",
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)",
             xaxis_title="Month",
             yaxis_title="Orders",
             showlegend=False
         )
+
+
+        monthly_orders_figure.update_traces(
+            hovertemplate=(
+                "%{x|%b %Y}"
+                "<br>Orders: %{y:,.0f}"
+                "<extra></extra>"
+            )
+        )
+
 
         st.plotly_chart(
             monthly_orders_figure,
@@ -699,18 +916,40 @@ with overview_tab:
             markers=True,
             title="Monthly Unique Customers",
             color_discrete_sequence=[
-                "#c084fc"
+                LAVENDER
             ]
         )
 
+
+        monthly_customer_figure = apply_ivory_theme(
+            monthly_customer_figure,
+            height=470
+        )
+
+
         monthly_customer_figure.update_layout(
-            template="plotly_dark",
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)",
             xaxis_title="Month",
             yaxis_title="Customers",
             showlegend=False
         )
+
+
+        monthly_customer_figure.update_traces(
+            line=dict(
+                width=3
+            ),
+
+            marker=dict(
+                size=8
+            ),
+
+            hovertemplate=(
+                "%{x|%b %Y}"
+                "<br>Customers: %{y:,.0f}"
+                "<extra></extra>"
+            )
+        )
+
 
         st.plotly_chart(
             monthly_customer_figure,
@@ -728,9 +967,11 @@ with momentum_tab:
         "Monthly Business Driver Race"
     )
 
-    st.caption(
-        "Press Play to view how Category, Channel, or Region "
-        "rankings change month by month."
+    st.markdown(
+        """
+        Press Play to view how Category, Channel, or Region
+        rankings change month by month.
+        """
     )
 
 
@@ -772,15 +1013,6 @@ with momentum_tab:
     )
 
 
-    selected_driver_df["net_sales"] = (
-        pd.to_numeric(
-            selected_driver_df["net_sales"],
-            errors="coerce"
-        )
-        .fillna(0)
-    )
-
-
     selected_driver_df["display_value"] = (
         selected_driver_df["net_sales"]
         .map(
@@ -799,36 +1031,55 @@ with momentum_tab:
 
     race_figure = px.bar(
         selected_driver_df,
+
         x="net_sales",
         y="dimension_value",
+
         color="dimension_value",
+
         animation_frame="month_label",
         animation_group="dimension_value",
+
         orientation="h",
+
         text="display_value",
+
         title=(
             f"Monthly Net Sales Momentum "
             f"by {selected_dimension}"
         ),
+
         labels={
             "net_sales": "Net Sales (₹)",
             "dimension_value":
                 selected_dimension,
             "month_label": "Month"
         },
+
         category_orders={
             "month_label": month_order
         },
+
         range_x=[
             0,
             maximum_sales * 1.15
-        ]
+        ],
+
+        color_discrete_sequence=CHART_COLORS
     )
 
 
     race_figure.update_traces(
         textposition="outside",
+
+        textfont=dict(
+            color=IVORY,
+            size=13,
+            family="Arial"
+        ),
+
         cliponaxis=False,
+
         hovertemplate=(
             f"{selected_dimension}: "
             "%{y}"
@@ -838,24 +1089,41 @@ with momentum_tab:
     )
 
 
+    race_figure = apply_ivory_theme(
+        race_figure,
+        height=640
+    )
+
+
     race_figure.update_layout(
-        height=620,
-        template="plotly_dark",
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
         showlegend=False,
+
         xaxis_title="Net Sales (₹)",
-        yaxis_title=selected_dimension,
-        yaxis={
-            "categoryorder":
-                "total ascending"
-        },
-        margin={
-            "l": 30,
-            "r": 90,
-            "t": 60,
-            "b": 30
-        }
+
+        yaxis=dict(
+            title=selected_dimension,
+
+            title_font=dict(
+                color=IVORY,
+                size=14
+            ),
+
+            tickfont=dict(
+                color=IVORY,
+                size=13
+            ),
+
+            categoryorder="total ascending",
+
+            gridcolor="rgba(255,255,240,0.05)"
+        ),
+
+        margin=dict(
+            l=50,
+            r=110,
+            t=80,
+            b=60
+        )
     )
 
 
@@ -863,15 +1131,62 @@ with momentum_tab:
 
         race_figure.layout.updatemenus[
             0
+        ].font = dict(
+            color=IVORY
+        )
+
+        race_figure.layout.updatemenus[
+            0
+        ].bgcolor = PANEL_NAVY
+
+        race_figure.layout.updatemenus[
+            0
+        ].bordercolor = IVORY
+
+
+        race_figure.layout.updatemenus[
+            0
         ].buttons[0].args[1][
             "frame"
         ]["duration"] = 1200
+
 
         race_figure.layout.updatemenus[
             0
         ].buttons[0].args[1][
             "transition"
         ]["duration"] = 700
+
+
+    if race_figure.layout.sliders:
+
+        race_figure.layout.sliders[
+            0
+        ].font = dict(
+            color=IVORY
+        )
+
+
+        race_figure.layout.sliders[
+            0
+        ].currentvalue = dict(
+            prefix="Month: ",
+
+            font=dict(
+                color=IVORY,
+                size=15
+            )
+        )
+
+
+        race_figure.layout.sliders[
+            0
+        ].activebgcolor = SKY_BLUE
+
+
+        race_figure.layout.sliders[
+            0
+        ].bordercolor = IVORY
 
 
     st.plotly_chart(
@@ -881,9 +1196,9 @@ with momentum_tab:
 
 
     st.info(
-        "Use the Play button below the chart to start the "
-        "monthly animation. Switch Category, Channel, and "
-        "Region using the selector above."
+        "Use Play/Pause underneath the chart to control the "
+        "animation. Switch between Category, Channel, and "
+        "Region using the selector."
     )
 
 
@@ -907,27 +1222,56 @@ with product_tab:
 
         top_products_figure = px.bar(
             product_df.head(10),
+
             x="net_sales",
             y="product_name",
+
             color="category",
+
             orientation="h",
+
             labels={
                 "net_sales": "Net Sales (₹)",
                 "product_name": "Product"
-            }
+            },
+
+            color_discrete_sequence=CHART_COLORS
+        )
+
+
+        top_products_figure = apply_ivory_theme(
+            top_products_figure,
+            height=580,
+            legend_title="Category"
         )
 
 
         top_products_figure.update_layout(
-            height=560,
-            template="plotly_dark",
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)",
-            yaxis={
-                "categoryorder":
-                    "total ascending"
-            },
-            legend_title="Category"
+            yaxis=dict(
+                title="Product",
+
+                title_font=dict(
+                    color=IVORY
+                ),
+
+                tickfont=dict(
+                    color=IVORY,
+                    size=11
+                ),
+
+                categoryorder="total ascending"
+            ),
+
+            xaxis_title="Net Sales (₹)"
+        )
+
+
+        top_products_figure.update_traces(
+            hovertemplate=(
+                "Product: %{y}"
+                "<br>Net Sales: ₹%{x:,.0f}"
+                "<extra></extra>"
+            )
         )
 
 
@@ -946,11 +1290,16 @@ with product_tab:
 
         channel_figure = px.scatter(
             channel_df,
+
             x="avg_order_value",
             y="gross_profit",
+
             size="net_sales",
+
             color="sales_channel",
+
             hover_name="sales_channel",
+
             labels={
                 "avg_order_value":
                     "Average Order Value (₹)",
@@ -958,16 +1307,18 @@ with product_tab:
                     "Gross Profit (₹)",
                 "net_sales":
                     "Net Sales"
-            }
+            },
+
+            color_discrete_sequence=CHART_COLORS,
+
+            size_max=65
         )
 
 
-        channel_figure.update_layout(
-            height=560,
-            template="plotly_dark",
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)",
-            legend_title="Channel"
+        channel_figure = apply_ivory_theme(
+            channel_figure,
+            height=580,
+            legend_title="Sales Channel"
         )
 
 
@@ -1002,18 +1353,23 @@ with campaign_tab:
 
     campaign_figure = px.scatter(
         campaign_df,
+
         x="budget_inr",
         y="net_sales",
+
         size="gross_profit",
+
         color="marketing_channel",
+
         hover_name="campaign_name",
+
         hover_data={
             "objective": True,
-            "sales_to_budget_ratio":
-                ":.2f",
+            "sales_to_budget_ratio": ":.2f",
             "total_orders": True,
             "unique_customers": True
         },
+
         labels={
             "budget_inr":
                 "Campaign Budget (₹)",
@@ -1021,15 +1377,17 @@ with campaign_tab:
                 "Net Sales (₹)",
             "gross_profit":
                 "Gross Profit"
-        }
+        },
+
+        color_discrete_sequence=CHART_COLORS,
+
+        size_max=70
     )
 
 
-    campaign_figure.update_layout(
-        height=600,
-        template="plotly_dark",
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
+    campaign_figure = apply_ivory_theme(
+        campaign_figure,
+        height=620,
         legend_title="Marketing Channel"
     )
 
@@ -1042,7 +1400,7 @@ with campaign_tab:
 
     st.caption(
         "Sales-to-Budget Ratio represents Net Sales divided "
-        "by campaign budget. It is not presented as marketing ROI."
+        "by Campaign Budget. It is not presented as marketing ROI."
     )
 
 
@@ -1059,7 +1417,17 @@ with campaign_tab:
 
 st.markdown("---")
 
-st.caption(
-    "Powered by Databricks Auto Loader, Delta Lake, "
-    "Unity Catalog, Medallion Architecture and Streamlit."
+st.markdown(
+    f"""
+    <div style="
+        color: {IVORY};
+        font-size: 13px;
+        text-align: center;
+        padding: 12px;
+    ">
+        Powered by Databricks Auto Loader, Delta Lake,
+        Unity Catalog, Medallion Architecture and Streamlit.
+    </div>
+    """,
+    unsafe_allow_html=True
 )
