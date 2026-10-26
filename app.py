@@ -1342,13 +1342,13 @@ channel_figure = px.scatter(
 )
 
 
-        channel_figure = apply_ivory_theme(
-            channel_figure,
-            height=580,
-            legend_title="Sales Channel"
-        )
+channel_figure = apply_ivory_theme(
+    channel_figure,
+    height=580,
+    legend_title="Sales Channel"
+    )
 
-        channel_figure.update_traces(
+channel_figure.update_traces(
     marker=dict(
         opacity=0.82,
 
