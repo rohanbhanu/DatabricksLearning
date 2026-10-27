@@ -1,6 +1,6 @@
 name: Build Insurance Java App
 
-on:
+"on":
   workflow_dispatch:
   push:
     branches:
@@ -14,23 +14,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Azul Zulu Java
+      - name: Setup Azul Zulu Java 21
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu'
-          java-version: '21'
-          cache: 'maven'
+          distribution: zulu
+          java-version: "21"
+          cache: maven
 
-      - name: Verify Java
+      - name: Verify Azul Zulu
         run: java -version
 
-      - name: Build application
+      - name: Build Insurance Java application
         run: mvn clean package
 
       - name: Show generated JAR
         run: ls -lh target/
 
-      - name: Upload JAR
+      - name: Upload Insurance Dashboard JAR
         uses: actions/upload-artifact@v4
         with:
           name: insurance-dashboard
