@@ -4,3 +4,4 @@ plotly
 databricks-sdk
 databricks-sql-connector
 pyarrow
+databricks-sdk

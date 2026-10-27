@@ -1,7 +1,10 @@
 import os
 import sys
+import shutil
 import subprocess
 from pathlib import Path
+
+from databricks.sdk import WorkspaceClient
 
 
 def log(message):
@@ -9,89 +12,147 @@ def log(message):
 
 
 def fail(message):
-    print(f"[LAUNCHER] ERROR: {message}", file=sys.stderr, flush=True)
+    print(
+        f"[LAUNCHER] ERROR: {message}",
+        file=sys.stderr,
+        flush=True
+    )
     sys.exit(1)
 
 
-# ---------------------------------------------------------
-# Read Databricks App resource configuration
-# ---------------------------------------------------------
+# =========================================================
+# 1. Resolve Databricks App resource
+# =========================================================
 
 artifacts_dir = os.getenv("INSURANCE_ARTIFACTS")
 
 if not artifacts_dir:
     fail(
         "INSURANCE_ARTIFACTS environment variable is missing. "
-        "Check the volume resource binding in app.yaml."
+        "Check app.yaml resource configuration."
     )
 
-artifacts_path = Path(artifacts_dir)
-
-log(f"Artifact volume: {artifacts_path}")
+log(f"Artifact volume: {artifacts_dir}")
 
 
-# ---------------------------------------------------------
-# Verify artifact volume
-# ---------------------------------------------------------
+# =========================================================
+# 2. Define remote and local JAR locations
+# =========================================================
 
-if not artifacts_path.exists():
-    fail(
-        f"Artifact volume does not exist or is not accessible: "
-        f"{artifacts_path}"
-    )
+remote_jar = (
+    artifacts_dir.rstrip("/")
+    + "/insurance-dashboard.jar"
+)
 
+local_dir = Path("/tmp/insurance-app")
+local_dir.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
-# ---------------------------------------------------------
-# Locate insurance application JAR
-# ---------------------------------------------------------
+local_jar = local_dir / "insurance-dashboard.jar"
 
-jar_path = artifacts_path / "insurance-dashboard.jar"
-
-log(f"Looking for application JAR: {jar_path}")
-
-if not jar_path.exists():
-    fail(f"Application JAR not found: {jar_path}")
-
-log("Insurance application JAR found.")
+log(f"Remote JAR: {remote_jar}")
+log(f"Local JAR: {local_jar}")
 
 
-# ---------------------------------------------------------
-# Runtime diagnostics
-# ---------------------------------------------------------
-
-log("Checking whether Java is already available...")
-
-java_path = None
+# =========================================================
+# 3. Download JAR using Databricks Files API
+# =========================================================
 
 try:
+
+    log("Connecting to Databricks Workspace API...")
+
+    workspace = WorkspaceClient()
+
+    log("Downloading insurance-dashboard.jar...")
+
+    response = workspace.files.download(
+        remote_jar
+    )
+
+    with open(local_jar, "wb") as output_file:
+        shutil.copyfileobj(
+            response.contents,
+            output_file
+        )
+
+except Exception as exc:
+
+    fail(
+        "Unable to download the application JAR "
+        f"from Unity Catalog Volume. Details: {exc}"
+    )
+
+
+# =========================================================
+# 4. Verify local JAR
+# =========================================================
+
+if not local_jar.exists():
+
+    fail(
+        "JAR download completed but local file "
+        "was not created."
+    )
+
+
+jar_size = local_jar.stat().st_size
+
+log(
+    f"JAR successfully downloaded. "
+    f"Size: {jar_size:,} bytes"
+)
+
+if jar_size == 0:
+
+    fail(
+        "Downloaded JAR is empty."
+    )
+
+
+# =========================================================
+# 5. Check existing Java runtime
+# =========================================================
+
+log("Checking for existing Java runtime...")
+
+java_command = None
+
+try:
+
     result = subprocess.run(
         ["java", "-version"],
         capture_output=True,
         text=True
     )
 
+    version_output = (
+        result.stderr.strip()
+        or result.stdout.strip()
+    )
+
     if result.returncode == 0:
 
-        java_path = "java"
-
-        version_output = (
-            result.stderr.strip()
-            if result.stderr
-            else result.stdout.strip()
-        )
+        java_command = "java"
 
         log("Java runtime detected.")
         log(version_output)
 
 except FileNotFoundError:
-    log("No system Java runtime detected.")
+
+    log(
+        "No Java executable exists in the "
+        "Databricks App runtime."
+    )
 
 
-# ---------------------------------------------------------
-# We specifically require Azul Zulu for this POC
-# ---------------------------------------------------------
+# =========================================================
+# 6. Stop if Java is unavailable
+# =========================================================
 
-if java_path is None:
+if java_command is None:
 
     fail(
         "Java runtime is not available. "
@@ -99,18 +160,18 @@ if java_path is None:
     )
 
 
-# ---------------------------------------------------------
-# Start Spring Boot
-# ---------------------------------------------------------
+# =========================================================
+# 7. Start Spring Boot application
+# =========================================================
 
 log("Starting Insurance Portfolio Intelligence...")
-log(f"JAR: {jar_path}")
+log(f"Application JAR: {local_jar}")
 
 os.execvp(
-    java_path,
+    java_command,
     [
-        java_path,
+        java_command,
         "-jar",
-        str(jar_path)
+        str(local_jar)
     ]
 )
