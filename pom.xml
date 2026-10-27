@@ -34,15 +34,19 @@
 
     </dependencies>
 
-    <build>
-        <finalName>insurance-dashboard</finalName>
+<build>
+    <finalName>insurance-dashboard</finalName>
 
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+
+            <configuration>
+                <mainClass>com.insurance.InsuranceApplication</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
 </project>
