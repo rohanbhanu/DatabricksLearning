@@ -8,10 +8,12 @@
 #    value: "false"
 
 command:
-  - java
-  - -jar
-  - target/insurance-dashboard.jar
+  - python
+  - launcher.py
 
-  env:
+env:
   - name: DATABRICKS_WAREHOUSE_ID
     valueFrom: sql-warehouse
+
+  - name: INSURANCE_ARTIFACTS
+    valueFrom: insurance-artifacts
