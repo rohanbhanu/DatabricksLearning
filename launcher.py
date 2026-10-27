@@ -1,6 +1,7 @@
 import os
 import sys
 import shutil
+import tarfile
 import subprocess
 from pathlib import Path
 
@@ -21,22 +22,22 @@ def fail(message):
 
 
 # =========================================================
-# 1. Resolve Databricks App resource
+# CONFIGURATION
 # =========================================================
 
 artifacts_dir = os.getenv("INSURANCE_ARTIFACTS")
 
 if not artifacts_dir:
     fail(
-        "INSURANCE_ARTIFACTS environment variable is missing. "
-        "Check app.yaml resource configuration."
+        "INSURANCE_ARTIFACTS environment variable "
+        "is not configured."
     )
 
 log(f"Artifact volume: {artifacts_dir}")
 
 
 # =========================================================
-# 2. Define remote and local JAR locations
+# ARTIFACT PATHS
 # =========================================================
 
 remote_jar = (
@@ -44,20 +45,35 @@ remote_jar = (
     + "/insurance-dashboard.jar"
 )
 
-local_dir = Path("/tmp/insurance-app")
-local_dir.mkdir(
+remote_zulu = (
+    artifacts_dir.rstrip("/")
+    + "/zulu21-linux-x64.tar.gz"
+)
+
+local_root = Path("/tmp/insurance-app")
+local_root.mkdir(
     parents=True,
     exist_ok=True
 )
 
-local_jar = local_dir / "insurance-dashboard.jar"
+local_jar = (
+    local_root
+    / "insurance-dashboard.jar"
+)
 
-log(f"Remote JAR: {remote_jar}")
-log(f"Local JAR: {local_jar}")
+local_zulu_archive = (
+    local_root
+    / "zulu21-linux-x64.tar.gz"
+)
+
+zulu_extract_dir = (
+    local_root
+    / "zulu"
+)
 
 
 # =========================================================
-# 3. Download JAR using Databricks Files API
+# CONNECT TO DATABRICKS
 # =========================================================
 
 try:
@@ -66,111 +82,240 @@ try:
 
     workspace = WorkspaceClient()
 
-    log("Downloading insurance-dashboard.jar...")
+except Exception as exc:
 
-    response = workspace.files.download(
-        remote_jar
+    fail(
+        f"Unable to initialize Databricks client: {exc}"
     )
 
-    with open(local_jar, "wb") as output_file:
-        shutil.copyfileobj(
-            response.contents,
-            output_file
+
+# =========================================================
+# HELPER: DOWNLOAD FILE
+# =========================================================
+
+def download_file(remote_path, local_path):
+
+    log(
+        f"Downloading {remote_path}"
+    )
+
+    try:
+
+        response = workspace.files.download(
+            remote_path
+        )
+
+        with open(local_path, "wb") as output_file:
+
+            shutil.copyfileobj(
+                response.contents,
+                output_file
+            )
+
+    except Exception as exc:
+
+        fail(
+            f"Unable to download {remote_path}: {exc}"
+        )
+
+    if not local_path.exists():
+
+        fail(
+            f"Downloaded file was not created: "
+            f"{local_path}"
+        )
+
+    size = local_path.stat().st_size
+
+    if size == 0:
+
+        fail(
+            f"Downloaded file is empty: "
+            f"{local_path}"
+        )
+
+    log(
+        f"Downloaded successfully: "
+        f"{local_path} ({size:,} bytes)"
+    )
+
+
+# =========================================================
+# DOWNLOAD SPRING BOOT JAR
+# =========================================================
+
+download_file(
+    remote_jar,
+    local_jar
+)
+
+
+# =========================================================
+# DOWNLOAD AZUL ZULU
+# =========================================================
+
+download_file(
+    remote_zulu,
+    local_zulu_archive
+)
+
+
+# =========================================================
+# EXTRACT AZUL ZULU
+# =========================================================
+
+log("Extracting Azul Zulu runtime...")
+
+try:
+
+    if zulu_extract_dir.exists():
+
+        shutil.rmtree(
+            zulu_extract_dir
+        )
+
+    zulu_extract_dir.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    with tarfile.open(
+        local_zulu_archive,
+        "r:gz"
+    ) as archive:
+
+        archive.extractall(
+            zulu_extract_dir
         )
 
 except Exception as exc:
 
     fail(
-        "Unable to download the application JAR "
-        f"from Unity Catalog Volume. Details: {exc}"
+        f"Unable to extract Azul Zulu: {exc}"
     )
 
 
 # =========================================================
-# 4. Verify local JAR
+# FIND JAVA EXECUTABLE
 # =========================================================
 
-if not local_jar.exists():
+log("Searching for Azul Zulu java executable...")
 
-    fail(
-        "JAR download completed but local file "
-        "was not created."
+java_candidates = list(
+    zulu_extract_dir.glob(
+        "**/bin/java"
     )
-
-
-jar_size = local_jar.stat().st_size
-
-log(
-    f"JAR successfully downloaded. "
-    f"Size: {jar_size:,} bytes"
 )
 
-if jar_size == 0:
+if not java_candidates:
 
     fail(
-        "Downloaded JAR is empty."
+        "Could not find bin/java inside "
+        "the extracted Azul Zulu package."
+    )
+
+java_path = java_candidates[0]
+
+log(
+    f"Java executable found: {java_path}"
+)
+
+
+# =========================================================
+# ENSURE JAVA IS EXECUTABLE
+# =========================================================
+
+try:
+
+    java_path.chmod(0o755)
+
+except Exception as exc:
+
+    fail(
+        f"Unable to mark Java executable: {exc}"
     )
 
 
 # =========================================================
-# 5. Check existing Java runtime
+# VERIFY JVM
 # =========================================================
 
-log("Checking for existing Java runtime...")
-
-java_command = None
+log("Verifying Java runtime...")
 
 try:
 
     result = subprocess.run(
-        ["java", "-version"],
+        [
+            str(java_path),
+            "-version"
+        ],
         capture_output=True,
         text=True
     )
 
-    version_output = (
-        result.stderr.strip()
-        or result.stdout.strip()
-    )
-
-    if result.returncode == 0:
-
-        java_command = "java"
-
-        log("Java runtime detected.")
-        log(version_output)
-
-except FileNotFoundError:
-
-    log(
-        "No Java executable exists in the "
-        "Databricks App runtime."
-    )
-
-
-# =========================================================
-# 6. Stop if Java is unavailable
-# =========================================================
-
-if java_command is None:
+except Exception as exc:
 
     fail(
-        "Java runtime is not available. "
-        "Azul Zulu bootstrap is required."
+        f"Unable to execute Java: {exc}"
+    )
+
+
+version_output = (
+    result.stderr.strip()
+    or result.stdout.strip()
+)
+
+log("Java runtime information:")
+log(version_output)
+
+
+if result.returncode != 0:
+
+    fail(
+        "Azul Zulu java -version failed."
     )
 
 
 # =========================================================
-# 7. Start Spring Boot application
+# SET JAVA_HOME
 # =========================================================
 
-log("Starting Insurance Portfolio Intelligence...")
-log(f"Application JAR: {local_jar}")
+java_home = java_path.parent.parent
 
-os.execvp(
-    java_command,
+os.environ["JAVA_HOME"] = str(
+    java_home
+)
+
+os.environ["PATH"] = (
+    str(java_path.parent)
+    + os.pathsep
+    + os.environ.get(
+        "PATH",
+        ""
+    )
+)
+
+log(
+    f"JAVA_HOME={java_home}"
+)
+
+
+# =========================================================
+# START SPRING BOOT APPLICATION
+# =========================================================
+
+log(
+    "Starting Insurance Portfolio Intelligence..."
+)
+
+log(
+    f"Application JAR: {local_jar}"
+)
+
+os.execv(
+    str(java_path),
     [
-        java_command,
+        str(java_path),
         "-jar",
         str(local_jar)
     ]
