@@ -1,4 +1,4 @@
-name: Build Insurance Java WebApp
+name: Build Insurance Java App
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Java
+      - name: Setup Azul Zulu Java
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
