@@ -16,4 +16,4 @@ env:
     valueFrom: sql-warehouse
 
   - name: INSURANCE_ARTIFACTS
-    valueFrom: insurance-artifacts
+    valueFrom: volume
