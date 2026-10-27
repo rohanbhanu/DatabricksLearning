@@ -1,8 +1,17 @@
-command: ["streamlit", "run", "app.py"]
+#command: ["streamlit", "run", "app.py"]
 
-env:
+#env:
+#  - name: DATABRICKS_WAREHOUSE_ID
+#    valueFrom: sql-warehouse
+
+#  - name: STREAMLIT_GATHER_USAGE_STATS
+#    value: "false"
+
+command:
+  - java
+  - -jar
+  - target/insurance-dashboard.jar
+
+  env:
   - name: DATABRICKS_WAREHOUSE_ID
     valueFrom: sql-warehouse
-
-  - name: STREAMLIT_GATHER_USAGE_STATS
-    value: "false"

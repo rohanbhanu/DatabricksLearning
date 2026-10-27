@@ -1,0 +1,37 @@
+name: Build Insurance Java App
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Verify Java
+        run: java -version
+
+      - name: Build application
+        run: mvn clean package
+
+      - name: Show generated JAR
+        run: ls -lh target/
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: insurance-dashboard
+          path: target/insurance-dashboard.jar
