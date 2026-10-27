@@ -5,30 +5,65 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Show repository structure
+        run: |
+          echo "Current directory:"
+          pwd
+
+          echo "Repository root:"
+          ls -la
+
+          echo "Java source files:"
+          find src -type f -print || true
+
+          echo "POM location:"
+          find . -name "pom.xml" -print
+
+      - name: Verify main Java class exists
+        run: |
+          test -f src/main/java/com/insurance/InsuranceApplication.java
+
+          echo "InsuranceApplication.java found successfully"
+
+          grep -n "package com.insurance" \
+            src/main/java/com/insurance/InsuranceApplication.java
+
+          grep -n "public static void main" \
+            src/main/java/com/insurance/InsuranceApplication.java
+
       - name: Setup Azul Zulu Java 21
         uses: actions/setup-java@v5
         with:
           distribution: zulu
-          java-version: '21'
+          java-version: "21"
           cache: maven
 
-      - name: Verify Java
-        run: java -version
+      - name: Verify Azul Zulu runtime
+        run: |
+          java -version
+          echo "JAVA_HOME=$JAVA_HOME"
+          mvn --version
 
       - name: Build application
-        run: mvn clean package
+        run: |
+          mvn --batch-mode --no-transfer-progress clean package
 
-      - name: Show generated JAR
-        run: ls -lh target/
+      - name: Verify generated JAR
+        run: |
+          test -f target/insurance-dashboard.jar
+          ls -lh target/insurance-dashboard.jar
 
-      - name: Upload JAR
+      - name: Upload Insurance Dashboard JAR
         uses: actions/upload-artifact@v4
         with:
           name: insurance-dashboard
           path: target/insurance-dashboard.jar
+          if-no-files-found: error
+          retention-days: 7
