@@ -45,9 +45,11 @@ remote_jar = (
     + "/insurance-dashboard.jar"
 )
 
+zulu_filename = "zulu21.54.107-ca-jdk21.0.13-linux_x64.tar.gz"
+
 remote_zulu = (
     artifacts_dir.rstrip("/")
-    + "/zulu21-linux-x64.tar.gz"
+    + "/" + zulu_filename
 )
 
 local_root = Path("/tmp/insurance-app")
@@ -63,7 +65,7 @@ local_jar = (
 
 local_zulu_archive = (
     local_root
-    / "zulu21-linux-x64.tar.gz"
+    / zulu_filename
 )
 
 zulu_extract_dir = (
