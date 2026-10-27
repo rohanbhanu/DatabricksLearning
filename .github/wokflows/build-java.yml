@@ -1,4 +1,4 @@
-name: Build Insurance Java App
+name: Build Insurance Java WebApp
 
 on:
   workflow_dispatch:
