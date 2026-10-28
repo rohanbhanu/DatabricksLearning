@@ -201,35 +201,34 @@ public class DatabricksService {
 
         StringBuilder sql =
                 new StringBuilder("""
-                    SELECT
-                    """);
+                SELECT
+                """);
 
         sql.append(level);
 
+        sql.append(" AS category, ");
+
         sql.append("""
-                    AS category,
+                SUM(gross_written_premium_inr)
+                AS premium,
 
-                    SUM(gross_written_premium_inr)
-                        AS premium,
+                SUM(claims_incurred_inr)
+                AS claims,
 
-                    SUM(claims_incurred_inr)
-                        AS claims,
+                SUM(policies_in_force)
+                AS policies,
 
-                    SUM(policies_in_force)
-                        AS policies,
+                CASE
+                WHEN SUM(earned_premium_inr) = 0
+                THEN 0
+                ELSE
+                        SUM(claims_incurred_inr)
+                        / SUM(earned_premium_inr)
+                END AS loss_ratio
 
-                    CASE
-                        WHEN SUM(earned_premium_inr) = 0
-                        THEN 0
-                        ELSE
-                            SUM(claims_incurred_inr)
-                            / SUM(earned_premium_inr)
-                    END AS loss_ratio
-
-                    FROM royalinsurance.edw.portfolio_monthly
-                    WHERE 1=1
-                    """);
-
+                FROM royalinsurance.edw.portfolio_monthly
+                WHERE 1=1
+                """);
         List<Object> params =
                 new ArrayList<>();
 
