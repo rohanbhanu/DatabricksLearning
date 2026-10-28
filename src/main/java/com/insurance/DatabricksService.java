@@ -361,9 +361,11 @@ public class DatabricksService {
                     Object value =
                             rs.getObject(i);
 
-                    if (value instanceof Date) {
-                        value = value.toString();
-                    }
+                    if (value instanceof java.sql.Date
+                        || value instanceof java.sql.Timestamp
+                        || value instanceof java.sql.Time) {
+                    value = value.toString();
+                }
 
                     row.put(
                             meta.getColumnLabel(i),
