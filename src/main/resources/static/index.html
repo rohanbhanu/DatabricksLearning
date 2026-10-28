@@ -11,6 +11,7 @@
 
     <title>Royal Insurance Portfolio Intelligence</title>
 
+    <!-- Dashboard stylesheet -->
     <link
         rel="stylesheet"
         href="/dashboard.css"
@@ -21,7 +22,9 @@
 
 <div class="shell">
 
-    <!-- HEADER -->
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
 
     <header class="hero">
 
@@ -47,7 +50,9 @@
     </header>
 
 
-    <!-- EXECUTIVE KPI SECTION -->
+    <!-- ==================================================
+         01 - EXECUTIVE PERFORMANCE
+    =================================================== -->
 
     <section>
 
@@ -61,9 +66,12 @@
                 </h2>
             </div>
 
-            <div id="reportMonth"></div>
+            <div id="reportMonth">
+                Loading reporting period...
+            </div>
 
         </div>
+
 
         <div
             id="kpiGrid"
@@ -73,7 +81,9 @@
     </section>
 
 
-    <!-- PORTFOLIO MOMENTUM -->
+    <!-- ==================================================
+         02 - PORTFOLIO MOMENTUM
+    =================================================== -->
 
     <section class="panel">
 
@@ -87,7 +97,13 @@
                 </h2>
             </div>
 
-            <div class="chart-controls">
+
+            <!-- Metric selector -->
+
+            <div
+                class="chart-controls"
+                role="group"
+                aria-label="Portfolio metric">
 
                 <button
                     type="button"
@@ -114,12 +130,14 @@
 
         </div>
 
+
         <div class="chart-frame">
 
             <svg
                 id="trendChart"
                 viewBox="0 0 1200 390"
-                preserveAspectRatio="none">
+                "
+                aria-label="Portfolio monthly trend">
             </svg>
 
         </div>
@@ -127,7 +145,9 @@
     </section>
 
 
-    <!-- PORTFOLIO DRILL DOWN -->
+    <!-- ==================================================
+         03 - PORTFOLIO EXPLORER
+    =================================================== -->
 
     <section class="panel">
 
@@ -147,20 +167,18 @@
                 id="rollUp"
                 class="rollup"
                 disabled>
-
                 ← Roll Up
-
             </button>
 
         </div>
 
 
+        <!-- Drill-down breadcrumb -->
+
         <div
             id="breadcrumb"
             class="breadcrumb">
-
             Enterprise › Region
-
         </div>
 
 
@@ -171,6 +189,8 @@
         </p>
 
 
+        <!-- Animated bubbles -->
+
         <div
             id="bubbleChart"
             class="bubble-chart">
@@ -179,7 +199,9 @@
     </section>
 
 
-    <!-- CLAIMS INTELLIGENCE -->
+    <!-- ==================================================
+         04 - CLAIMS INTELLIGENCE
+    =================================================== -->
 
     <section>
 
@@ -191,10 +213,20 @@
                 <h2>
                     Claims Intelligence
                 </h2>
-          id="riskCards"
+            </div>
+
+        </div>
+
+
+        <!-- Claim risk KPI cards -->
+
+        <div
+            id="riskCards"
             class="risk-grid">
         </div>
 
+
+        <!-- Claims by status chart -->
 
         <div class="panel claims-panel">
 
@@ -212,19 +244,34 @@
     </section>
 
 
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
     <footer>
-        Royal Insurance • Databricks Lakehouse •
-        Azul Zulu Java 21
+        Royal Insurance • Databricks Lakehouse • Azul Zulu Java 21
     </footer>
 
 </div>
 
 
+<!-- ==================================================
+     SHARED TOOLTIP
+=================================================== -->
+
 <div
     id="tooltip"
-    class="tooltip">
+    class="tooltip"
+    role="tooltip">
 </div>
 
+
+<!-- ==================================================
+     DASHBOARD JAVASCRIPT
+
+     Keep this immediately before closing BODY so all
+     dashboard elements exist before JS initialization.
+=================================================== -->
 
 /dashboard.jsscript>
 
