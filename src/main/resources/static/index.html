@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
-        content="width=device-width,initial-scale=1"
+        content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Royal Insurance Portfolio Intelligence
-    </title>
+    <title>Royal Insurance Portfolio Intelligence</title>
 
-    /dashboard.css
-
+    <link
+        rel="stylesheet"
+        href="/dashboard.css"
+    >
 </head>
 
 <body>
@@ -28,7 +26,6 @@
     <header class="hero">
 
         <div>
-
             <div class="eyebrow">
                 ROYAL INSURANCE
             </div>
@@ -41,7 +38,6 @@
                 Enterprise insurance performance,
                 profitability and risk intelligence
             </p>
-
         </div>
 
         <div class="tech-pill">
@@ -51,7 +47,7 @@
     </header>
 
 
-    <!-- KPI -->
+    <!-- EXECUTIVE KPI SECTION -->
 
     <section>
 
@@ -59,7 +55,10 @@
 
             <div>
                 <span class="section-number">01</span>
-                <h2>Executive Performance</h2>
+
+                <h2>
+                    Executive Performance
+                </h2>
             </div>
 
             <div id="reportMonth"></div>
@@ -68,13 +67,13 @@
 
         <div
             id="kpiGrid"
-            class="kpi-grid"
-        ></div>
+            class="kpi-grid">
+        </div>
 
     </section>
 
 
-    <!-- MONTHLY TREND -->
+    <!-- PORTFOLIO MOMENTUM -->
 
     <section class="panel">
 
@@ -82,29 +81,32 @@
 
             <div>
                 <span class="section-number">02</span>
-                <h2>Portfolio Momentum</h2>
+
+                <h2>
+                    Portfolio Momentum
+                </h2>
             </div>
 
             <div class="chart-controls">
 
                 <button
+                    type="button"
                     class="metric active"
-                    data-metric="gwp"
-                >
+                    data-metric="gwp">
                     Premium
                 </button>
 
                 <button
+                    type="button"
                     class="metric"
-                    data-metric="claims"
-                >
+                    data-metric="claims">
                     Claims
                 </button>
 
                 <button
+                    type="button"
                     class="metric"
-                    data-metric="policies"
-                >
+                    data-metric="policies">
                     Policies
                 </button>
 
@@ -117,15 +119,15 @@
             <svg
                 id="trendChart"
                 viewBox="0 0 1200 390"
-                preserveAspectRatio="none"
-            ></svg>
+                preserveAspectRatio="none">
+            </svg>
 
         </div>
 
     </section>
 
 
-    <!-- DRILL DOWN -->
+    <!-- PORTFOLIO DRILL DOWN -->
 
     <section class="panel">
 
@@ -133,40 +135,51 @@
 
             <div>
                 <span class="section-number">03</span>
-                <h2>Portfolio Explorer</h2>
+
+                <h2>
+                    Portfolio Explorer
+                </h2>
             </div>
 
+
             <button
+                type="button"
                 id="rollUp"
                 class="rollup"
-                disabled
-            >
+                disabled>
+
                 ← Roll Up
+
             </button>
 
         </div>
 
+
         <div
             id="breadcrumb"
-            class="breadcrumb"
-        >
+            class="breadcrumb">
+
             Enterprise › Region
+
         </div>
+
 
         <p class="hint">
             Click a portfolio segment to drill down.
-            Bubble size represents premium.
+            Bubble size represents Gross Written Premium.
+            Bubble color represents Loss Ratio.
         </p>
+
 
         <div
             id="bubbleChart"
-            class="bubble-chart"
-        ></div>
+            class="bubble-chart">
+        </div>
 
     </section>
 
 
-    <!-- CLAIM INTELLIGENCE -->
+    <!-- CLAIMS INTELLIGENCE -->
 
     <section>
 
@@ -174,16 +187,13 @@
 
             <div>
                 <span class="section-number">04</span>
-                <h2>Claims Intelligence</h2>
-            </div>
 
+                <h2>
+                    Claims Intelligence
+                </h2>
+          id="riskCards"
+            class="risk-grid">
         </div>
-
-
-        <div
-            id="riskCards"
-            class="risk-grid"
-        ></div>
 
 
         <div class="panel claims-panel">
@@ -194,22 +204,17 @@
 
             <div
                 id="claimsChart"
-                class="claims-chart"
-            ></div>
+                class="claims-chart">
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- FOOTER -->
-
     <footer>
-
-        Royal Insurance •
-        Databricks Lakehouse •
+        Royal Insurance • Databricks Lakehouse •
         Azul Zulu Java 21
-
     </footer>
 
 </div>
@@ -217,8 +222,8 @@
 
 <div
     id="tooltip"
-    class="tooltip"
-></div>
+    class="tooltip">
+</div>
 
 
 /dashboard.jsscript>
