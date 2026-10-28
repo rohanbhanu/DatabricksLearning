@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1"
+    >
+
+    <title>
+        Royal Insurance Portfolio Intelligence
+    </title>
+
+    /dashboard.css
+
+</head>
+
+<body>
+
+<div class="shell">
+
+    <!-- HEADER -->
+
+    <header class="hero">
+
+        <div>
+
+            <div class="eyebrow">
+                ROYAL INSURANCE
+            </div>
+
+            <h1>
+                Portfolio Intelligence Dashboard
+            </h1>
+
+            <p>
+                Enterprise insurance performance,
+                profitability and risk intelligence
+            </p>
+
+        </div>
+
+        <div class="tech-pill">
+            Java 21 • Azul Zulu • Databricks
+        </div>
+
+    </header>
+
+
+    <!-- KPI -->
+
+    <section>
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-number">01</span>
+                <h2>Executive Performance</h2>
+            </div>
+
+            <div id="reportMonth"></div>
+
+        </div>
+
+        <div
+            id="kpiGrid"
+            class="kpi-grid"
+        ></div>
+
+    </section>
+
+
+    <!-- MONTHLY TREND -->
+
+    <section class="panel">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-number">02</span>
+                <h2>Portfolio Momentum</h2>
+            </div>
+
+            <div class="chart-controls">
+
+                <button
+                    class="metric active"
+                    data-metric="gwp"
+                >
+                    Premium
+                </button>
+
+                <button
+                    class="metric"
+                    data-metric="claims"
+                >
+                    Claims
+                </button>
+
+                <button
+                    class="metric"
+                    data-metric="policies"
+                >
+                    Policies
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="chart-frame">
+
+            <svg
+                id="trendChart"
+                viewBox="0 0 1200 390"
+                preserveAspectRatio="none"
+            ></svg>
+
+        </div>
+
+    </section>
+
+
+    <!-- DRILL DOWN -->
+
+    <section class="panel">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-number">03</span>
+                <h2>Portfolio Explorer</h2>
+            </div>
+
+            <button
+                id="rollUp"
+                class="rollup"
+                disabled
+            >
+                ← Roll Up
+            </button>
+
+        </div>
+
+        <div
+            id="breadcrumb"
+            class="breadcrumb"
+        >
+            Enterprise › Region
+        </div>
+
+        <p class="hint">
+            Click a portfolio segment to drill down.
+            Bubble size represents premium.
+        </p>
+
+        <div
+            id="bubbleChart"
+            class="bubble-chart"
+        ></div>
+
+    </section>
+
+
+    <!-- CLAIM INTELLIGENCE -->
+
+    <section>
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-number">04</span>
+                <h2>Claims Intelligence</h2>
+            </div>
+
+        </div>
+
+
+        <div
+            id="riskCards"
+            class="risk-grid"
+        ></div>
+
+
+        <div class="panel claims-panel">
+
+            <h3>
+                Claims by Status
+            </h3>
+
+            <div
+                id="claimsChart"
+                class="claims-chart"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Royal Insurance •
+        Databricks Lakehouse •
+        Azul Zulu Java 21
+
+    </footer>
+
+</div>
+
+
+<div
+    id="tooltip"
+    class="tooltip"
+></div>
+
+
+/dashboard.jsscript>
+
+</body>
+
+</html>
