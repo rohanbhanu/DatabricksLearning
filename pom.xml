@@ -27,26 +27,38 @@
 
     <dependencies>
 
+        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Databricks JDBC Driver -->
+        <dependency>
+            <groupId>com.databricks</groupId>
+            <artifactId>databricks-jdbc</artifactId>
+            <version>3.4.4</version>
+        </dependency>
+
     </dependencies>
 
-<build>
-    <finalName>insurance-dashboard</finalName>
+    <build>
+        <finalName>insurance-dashboard</finalName>
 
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
+        <plugins>
 
-            <configuration>
-                <mainClass>com.insurance.InsuranceApplication</mainClass>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <configuration>
+                    <mainClass>com.insurance.InsuranceApplication</mainClass>
+                </configuration>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
 
 </project>
