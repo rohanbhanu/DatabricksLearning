@@ -15,48 +15,50 @@ public class InsuranceApplication {
 
     @GetMapping("/")
     public String home() {
-
         return """
+            <!DOCTYPE html>
             <html>
             <head>
-                <title>Insurance Intelligence</title>
+                <title>Royal Insurance</title>
+                <style>
+                    body {
+                        background: #0b132b;
+                        color: white;
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        padding-top: 100px;
+                    }
+
+                    h1 {
+                        color: #00d4ff;
+                        font-size: 42px;
+                    }
+
+                    .status {
+                        color: #58e6a9;
+                        font-size: 22px;
+                        margin-top: 20px;
+                    }
+                </style>
             </head>
 
-            <body style="
-                background:#07111f;
-                color:white;
-                font-family:Arial;
-                text-align:center;
-                padding-top:100px;">
+            <body>
 
-                <h1>Insurance Portfolio Intelligence</h1>
+                <h1>Royal Insurance</h1>
 
-                <h2 style="color:#51d6ca;">
-                    Databricks + Java POC
-                </h2>
+                <h2>Portfolio Intelligence Dashboard</h2>
 
-                <p>
-                    Insurance Analytics Platform
-                </p>
+                <div class="status">
+                    Java 21 + Azul Zulu + Spring Boot is running
+                </div>
 
             </body>
             </html>
             """;
     }
 
-    @GetMapping("/runtime")
-    public String runtime() {
-
-        return """
-            {
-                "javaVersion": "%s",
-                "javaVendor": "%s",
-                "javaHome": "%s"
-            }
-            """.formatted(
-                System.getProperty("java.version"),
-                System.getProperty("java.vendor"),
-                System.getProperty("java.home")
-            );
+    @GetMapping("/health")
+    public String health() {
+        return "OK";
     }
 }
