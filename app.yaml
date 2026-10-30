@@ -1,19 +1,19 @@
-#command: ["streamlit", "run", "app.py"]
-
-#env:
-#  - name: DATABRICKS_WAREHOUSE_ID
-#    valueFrom: sql-warehouse
-
-#  - name: STREAMLIT_GATHER_USAGE_STATS
-#    value: "false"
-
-command:
-  - python
-  - launcher.py
+command: ["streamlit", "run", "app.py"]
 
 env:
   - name: DATABRICKS_WAREHOUSE_ID
     valueFrom: sql-warehouse
 
-  - name: INSURANCE_ARTIFACTS
-    valueFrom: volume
+  - name: STREAMLIT_GATHER_USAGE_STATS
+    value: "false"
+
+#command:
+#  - python
+#  - launcher.py
+
+#env:
+#  - name: DATABRICKS_WAREHOUSE_ID
+#    valueFrom: sql-warehouse
+
+#  - name: INSURANCE_ARTIFACTS
+#    valueFrom: volume
